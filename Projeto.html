@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+</head>
+
+<body>
+    <h1><mark><i>Módulo 1 - Primeiros Passos com HTML</i></mark></h1>
+    <hr />
+
+    <h2 id="#topicos">Neste documento, irei mostrar um resumo do que foi aprendido com a formação HTML Developer da DIO.</h2>
+    <p><strong><u>ÍNDICE:</u></strong></p>
+    <ul>
+        
+        <li><a href="#historia">História dos computadores</a></li>
+        <li><a href="#como-funciona">Como funciona a <i>Internet</i>?</a></li>
+        <li><a href="#client-server">O que são <i>Clients e Servers</i>?</a></li>
+        <li><a href="#html-estrutura">Como é uma estrutura básica de um HTML?</a></li>
+        <li><a href="#listas">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
+        <li><a href="#links">Links de referências</a></li>
+    </ul>
+
+
+    <h2 id="historia"><mark>História dos computadores</mark></h2>
+    
+    
+    <p>Os computadores nem sempre foram essas máquinas potentes que estamos acostumados, onde podemos fazer quase tudo,
+        desde rodar programas de edição de vídeos, jogar diversos jogos, fazer chamadas de vídeo com outra pessoa ou até
+        navegar na internet. Sim, é difícil acreditar.</p>
+    <p>Muito antes de conseguir fazer tudo isso (e mais), o computador era um instrumento muito mais fraco do que era
+        hoje, mas também, extremamente maior do que era hoje. Para se ter uma noção, os primeiros computadores ocupavam
+        uma sala inteira. Ok, mas quando surgiu o primeiro computador?
+    </p>
+    <p>Por volta do ano 1800, século XIX, alguns inventores começaram a pensar sobre algum tipo de máquina que pudessem
+        ajudar a resolver problemas matemáticos complexos. Nesse período, um inventor chamado Charles Babbage, projetou
+        o que pode ser considerado o primeiro computador, nomeando-a como "Máquina Analítica", sendo uma espécie de
+        máquina mecânica para realizar cálculos através de bilhetes perfurados. Ele nunca chegou a construir a máquina
+        completa, mas essa sua visão ajudou a estabelecer algumas bases para o futuro da criação do computador</p>
+    <p>Passaram-se alguns anos, onde diversos cientistas e inventores foram projetando e tentando construir algo
+        parecido com a Máquina Analítica de Babbage. Mas só durante as décadas de 1930 e 1940, John Presper Eckert e
+        John Mauchly lideraram uma equipe que projetou e construiu o ENIAC (Electronic Numerical Integrator and
+        Computer), o primeiro computador eletrônico de grande escala. O ENIAC usava mais de 17.000 tubos de vácuo e
+        pesava aproximadamente 30 toneladas. Gigantesco, neh?!</p>
+    <p>Em 1950 veio a invenção do transistor, que é um componente eletrônico menor, mais eficaz e confiável do que os
+        tubos de vácuo. William Shockley, John Bardeen e Walter Brattain ganharam o prêmio Nobel por essa invenção. E
+        ainda na década de 1950, Jack Kilby e Robert Noyce desenvolveram o circuito integrado, que permitiu a fabricação
+        de chips compactos com múltiplos transistores e componentes eletrônicos e também.</p>
+    <p>Na década de 70, foi a revolução dos computadores pessoais. Steve Wozniak e seu amigo Steve Jobs, na garagem da
+        casa do pai de Jobs, fundaram uma empresa que até hoje é conhecida por suas inovações tecnológicas, a Apple.
+        Nesse período lançaram o primeiro computador pessoal, o Apple 1. Poucos anos depois, a IBM (International
+        Business Machines Corporation), lançou o seu computador pessoal, o IBM PC. O grande marco desses lançamentos foi
+        que eles conseguiram mudar a ideia de que os computadores serviriam apenas para análise, e com interfaces
+        gráficas e facilidade no uso, introduziram a ideia de que os computadores poderiam ser ferramentas pessoais.</p>
+    <p>Os anos 1990 ficaram conhecidos pelo boom da Internet, mais especificamente da World Wide Web(nosso conehcido de
+        hoje, o WWW), criada por Tim Bernes-Lee, que além disso, criou o protocolo HTTP e também o HTML(HyperText Markup
+        Language). Essa linguagem simples, mas eficiente foi usada para a criação de sites com hipertextos (são
+        documentos que são ligados entre si). Com isso, empresas como a Netscape, que criou o primeiro navegador, e o
+        Google, que revolucionou as pesquisas online, surgiram.</p>
+    <p>Os anos 2000, foram de mais novidades tecnológicas. Ficou marcada como uma epóca de ascensão dos aparelhos
+        móveis, como os smartphones e tablets. Em 2007, a Apple lançou o Iphone, marcando o início da era dos
+        smartphones touchscreen. Tais dispositivos, eram como computadores portáteis, que permitiam executar
+        aplicativos, acessar a internet, ouvir músicas e muito mais. Nos tempos atuais, vemos contínua expansão da
+        capacidade dos computadores, com a interconexão global cada vez maior, a proliferação de diversas inteligências
+        artificiais, a criação de casas com diversos aparelhos "inteligentes", conhecido como a "Internet das coisas"
+        (IoT) e até a criação de super computadores quânticos.</p>
+    <p>Esse foi um breve resumo sobre a história computacional, desde as engrenagens da Máquina Analítica até a
+        computação onipresente dos dias atuais. Cada época, revolucionou em algo o mundo em que vivemos, e isso mostra
+        que a tecnologia é fruto de trabalho colaborativo de muitas pessoas, sendo assim, cada indivíduo citado acima,
+        teve ajuda de diversas outras pessoas que merecem reconhecimento por nos ajudar com a facilidade que temos hoje
+        com a computação.</p>
+
+        <h4><a href="#">Voltar ao Indice</a></h4>
+
+    <h2 id="como-funciona"><mark>Como Funciona a <i>Internet</i> ?</mark></h2>
+    
+   
+    <p>Antes de entender o que são os <i>Clients e Servers,</i> precisamos entender como funciona a internet. Explicarei
+        de uma forma resumida e breve.</p>
+    <p>A internet é uma rede de computadores interconectados globalmente, e com isso, conseguimos compartilhar
+        informações e recursos em todo o planeta. O funcionamneto se dá por meio de protocolos de rede, infraestruturas
+        físicas e softwares que fazem os dispositivos se conectarem entre si. A World Wide Web é uma parte extremamente
+        importante, é lá que os usuários podem acessar as páginas web e todos os recursos online.</p>
+
+
+    <p>Agora podemos partir para uma definição de <i>Clients e Servers.</i></p>
+
+    <h4><a href="#">Voltar ao Indice</a></h4>
+
+    <h2 id="client-server"><mark>O que são <i>Clients e Servers</i>?</mark></h2>
+
+
+    <p><strong><i>Clients :</i></strong> Os clientes são os dispositivos que usamos para acessar a internet. Podendo ser
+        computadores, notebooks, smartphones, tablets e até Smart TVs. Os clientes solicitam acesso a recursos da
+        internet, como sites ou arquivos através de navegadores web.</p>
+
+    <p><strong><i>Servers:</i></strong> Os servidores são os dispositivos extremamente poderosos que fornecem as
+        informações que são solicitadas pelos clientes. Os servidores hospedam sites, arquivos, aplicativos , e-mails e
+        outros serviços online.Quando você digita um endereço de site em seu navegador, o servidor correspondente envia
+        as páginas da web para o seu dispositivo, que o exibe para você.</p>
+
+    <p>Essa foi uma forma resumida de explicar esses conceitos da Internet e do computador antes de partirmos para nosso
+        último tópico. Caso ainda tenha dúvidas, existem diversos vídeos online que mostram de uma maneira mais
+        aprofundada sobre os temas falados acima.</p>
+        <h4><a href="#">Voltar ao Indice</a></h4>
+
+
+    <h2 id="html-estrutura"><mark>Como é uma estrutura básica de um HTML?</mark></h2>
+    
+    <p> O HTML é uma linguagem de marcação de texto, que significa que você está marcando partes de um conteúdo para
+        definir como devem ser representados quando forem acessados. Com HTML, você pode colocar imagens, criar links,
+        organizar listas e muito mais, permitindo a criação de páginas web com muito conteúdo e também interativas.
+    </p>
+
+    <p>A base estrutural de um código em HTML é o seguinte:</p>
+
+    <p><strong>&lt;!DOCTYPE html&gt;</strong> Isso declara o tipo de documento como HTML5, que é a versão mais recente
+        da linguagem HTML</p>
+
+    <p><strong>&lt;html&gt;</strong> Este é o elemento raiz do documento HTML e contém todo o conteúdo da página.</p>
+
+    <p><strong>&lt;head&gt;</strong> Aqui você coloca informações sobre o documento, como metadados, títulos e links
+        para folhas de estilo ou scripts.</p>
+
+    <p><strong>&lt;title&gt;</strong> Define o título da página, que é exibido na guia ou na barra de título do
+        navegador.</p>
+
+    <p><strong>&lt;body&gt;</strong> Contém o conteúdo visível da página, como texto, imagens, links e outros elementos.
+    </p>
+
+    <p><strong>&lt;h1&gt;</strong></h2> É um cabeçalho de nível 1, usado para títulos importantes. Ele vai do h1 até o
+        h6,
+        sendo o h1 o maior e h6 o menor.</p>
+
+    <p><strong>&lt;p&gt;</strong> É um parágrafo, onde é inserido blocos de textos.</p>
+
+    <h4><a href="#">Voltar ao Indice</a></h4>
+
+    <h2 id="listas"><mark>Entendendo a diferença entre listas ordenadas e não ordenadas</mark></h2>
+    
+    
+
+    <p>As listas ordenadas e não ordenadas em HTML são utilizadas para organizar itens em um documento web. Elas têm
+        propósitos diferentes e são estilizadas de maneira diferente pelo navegador. Vamos entender as diferenças entre
+        elas:</p>
+    <ul>
+
+        <li><strong>Listas Não Ordenadas</strong> (&lt;ul&gt; - Unordered List):</li>
+
+        Em uma lista não ordenada, os itens são exibidos sem uma sequência específica. Geralmente, eles são marcados com
+        pontos, círculos ou quadrados.Cada item da lista é definido com a tag &lt;li&gt; (List Item).
+
+
+        <li><strong>Listas Ordenadas </strong> (&lt;ol&gt; - Ordered List):
+
+            Em uma lista ordenada, os itens são exibidos em uma sequência numérica.
+            Assim como nas listas não ordenadas, cada item da lista é definido com a tag &lt;li&gt;.</li>
+
+        <h3>Diferenças Principais:</h3>
+
+        <p><strong>Sequência:</strong> A principal diferença é que as listas ordenadas mostram os itens em uma sequência
+            numérica (ou alfabética, dependendo do tipo de lista), enquanto as listas não ordenadas não seguem nenhuma
+            ordem específica. </p>
+
+        <p><strong>Estilo Padrão:</strong> Os navegadores geralmente exibem listas não ordenadas com marcadores (pontos,
+            círculos ou quadrados), enquanto listas ordenadas são exibidas com números ou letras.</p>
+
+        <p><strong>Uso: </strong>Use listas ordenadas quando você precisa apresentar itens em uma ordem específica, como
+            passos em um tutorial. Use listas não ordenadas quando a ordem dos itens não importa, como em listas de
+            características.</p>
+
+        <p><strong>Semântica:</strong> Além das diferenças visuais, as listas ordenadas e não ordenadas ajudam a
+            fornecer uma estrutura semântica ao conteúdo, facilitando para os leitores e para os mecanismos de busca
+            compreenderem a organização dos dados.</p>
+
+        <p>Ambos os tipos de listas são ferramentas valiosas para estruturar informações em uma página da web de maneira
+            organizada e acessível. Escolha o tipo que melhor se adequa ao seu conteúdo e ao seu objetivo de
+            apresentação.</p>
+
+            <h4><a href="#">Voltar ao Indice</a></h4>
+
+        <h2 id="links"><i>Links de referências</i></h2>
+       
+        
+
+        <li><a href="http://dio.me" target="_blank">DIO.me </a></li>
+        <li><a href="http://w3c.org" target="_blank">W3Schools</a></li>
+    </ul>
+
+</body>
+
+</html>
