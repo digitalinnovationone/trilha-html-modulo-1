@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template - Utilizar como modelo</title>
+    <link rel="stylesheet" href="base.css">
+
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 5px 10px;
+        }
+
+        th{
+            background: rgb(5, 108, 108);
+            color: white;
+        }
+
+        table tr:nth-child(odd){
+            background: aquamarine;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <!-- Aqui vai o seu menu -->
+            <ul>
+                <li><a href="./index.html">Sobre a Clínica</a></li>
+                <li><a href="#">Horário de Atendimento</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <img src="./img/atendimento.png" alt="logo da clinica" width="80px" >
+
+                <h1 style="text-align: center; color: aliceblue;">Horário de Atendimento</h1>
+                <!-- Aqui vai o seu header -->
+            </div>
+    
+            <div class="content">
+                <!-- Aqui vai o seu conteúdo -->
+                <h1>LÍDER EM SAÚDE CAPILAR</h1>
+                <p>
+                    Transplante Capilar com recurso a Tecnologia Exclusiva de Última Geração
+                    A única Clínica do setor com Certificação da Qualidade, PME Excelência, Prémio Cinco Estrelas, Escolha do Consumidor e Departamento de Investigação, na vertente Clínica e Tecnológica.
+                    Mais de 40 000 Pacientes Satisfeitos.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="4">Horários</th>
+                        </tr>
+                        
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Serviços</td>
+                            <td>Segunda a sexta</td>
+                            <td>Feriados</td>
+                            <td>Preços</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transplante-Capilar</td>
+                            <td>09h-18h</td>
+                            <td>08h-14h</td>
+                            <td>R$ 5.000,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transplante-Sombracelha</td>
+                            <td>09h-18h</td>
+                            <td>08h-14h</td>
+                            <td>R$ 2.500,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transplante-Barba</td>
+                            <td>09h-18h</td>
+                            <td>08h-14h</td>
+                            <td>R$ 3.900,00</td>
+                        </tr>
+                        
+                    </tbody>
+
+                    <tfoot>
+                        <td colspan="2">Fiado?</td>
+                        <td colspan="2">so amanhã</td>
+                    </tfoot>
+                </table>
+            </div>
+    
+            <div class="footer">
+                
+                <!-- Aqui vai o seu rodapé -->
+                
+                <h3 style="color: white;"><img src="./img/kisspng-logo-clinic-family-medicine-physician-family-walk-5b5213025e5133.8741793415321054743863.jpg" alt="" width="45px"> Clínica de Cabelo</h3>
+                <p style="color: white;"><strong>Telefone:</strong> (98) 98585-8585</p>
+                <p ><a style="color: white;" href="#"> clinicadeCabelo@gmail.com.br </a></p>
+                <span style="color: white;">SÃO BERNARDO - 2023</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
