@@ -1,62 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-br">
+<meta>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+    <title>Meu projeto DIO.me</title>
+    <meta name="description" content="Projeto de criaçao do meu primeiro site"> <!--Descrição exibida na página do google-->
+    <meta name="keywords" content="Projeto, Site, DIO.me"><!--Palavras chaves-->
 </head>
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
+<!------------------------------------------------------------------------------------------------------------------>
+    <h1 id="inicio">Módulo 1 - Primeiros passos com HTML</h1> <!--Titulo da pagina-->
+    <hr/>
 
     <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
+    <ol> <!--Lista Ordenada-->
+        <li><a href="#historia">História dos computadores.</a></li> <!-- Itens da lista-->
+        <li><a href="#clients">O que são <strong><i>Clients</i></strong>.</i></a></li>
+        <li><a href="#servers">O que são <strong><i>Servers</i></strong>.</a></li>
+        <li><a href="#estrutura">Como é uma estrutura básica de um HTML?.</a></li>
+        <li><a href="#listas"> Entendendo a diferença entre listas ordenadas e não ordenadas.</a></li>
+        <li><a href="#links"><strong><i>Links</i></strong> de referência.</a></li>
+
+    </ol>
+    <hr/>
+<!------------------------------------------------------------------------------------------------------------------>
+    <h2 id="historia">História dos computadores</h2> <!-- Capítulo 1-->
+    <button><a href="#inicio">voltar</a></button>
+    <h3>Uma Breve Viagem pela História dos Computadores</h3>
     <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
+        <li>Os Primeiros Cálculos:</li> <!--Tópico 1-->
+        <p>Os primeiros dispositivos de cálculo surgiram há milênios, como o  <strong><i>ábaco</i></strong>, utilizado pelos chineses para realizar operações aritméticas básicas;</p>
+
+        <li>A Era Mecânica:</li> <!--Tópico 2-->
+        <p>No século XIX, o matemático inglês <strong><i>Charles Babbage</i></strong> concebeu a Máquina Analítica, considerada o primeiro computador mecânico programável. Embora nunca tenha sido completamente construída, suas ideias foram fundamentais para o desenvolvimento futuro dos computadores;</p>
+
+        <li>A Era Eletrônica:</li> <!--Tópico 3-->
+        <ul>
+            <li><strong>Primeira Geração</strong>: Com a invenção das válvulas eletrônicas, surgiram os primeiros computadores eletrônicos, como o ENIAC (Eletronic Numerical Integrator and Computer). Eram máquinas enormes, que ocupavam salas inteiras e consumiam muita energia;</li><!-- sub-tópico 1-->
+
+            <li><strong>Segunda Geração</strong>: A substituição das válvulas por transistores tornou os computadores menores, mais rápidos e confiáveis. Surgiram linguagens de programação de baixo nível e os primeiros sistemas operacionais;</li><!-- sub-tópico 2-->
+
+            <li><strong>Terceira Geração</strong>: Com o surgimento dos circuitos integrados, os computadores se tornaram ainda menores e mais poderosos. Surgiram os minicomputadores e os primeiros computadores pessoais;</li><!-- sub-tópico 3-->
+
+            <li><strong>Quarta Geração</strong>: A invenção dos microprocessadores marcou o início da era dos microcomputadores, que se popularizaram rapidamente. A internet começou a se expandir e a mudar a forma como nos comunicamos e acessamos informações;</li> <!-- sub-tópico 4-->
+
+            <li><strong>Quinta Geração</strong>: Atualmente, vivemos a era da inteligência artificial, da computação em nuvem e da internet das coisas. Os computadores estão presentes em praticamente todos os aspectos de nossas vidas.</li> <!-- sub-tópico 4-->
+        </ul>
     </ul>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h3>A Evolução Continua</h3>
+    <p>A história dos computadores é marcada por avanços constantes e rápidos. A cada dia, novas tecnologias surgem, tornando os computadores mais poderosos, menores e mais acessíveis. A jornada continua, e o futuro promete ainda mais inovações.</p> <!--Fim do Capítulo 1-->
+    <hr/>
+<!------------------------------------------------------------------------------------------------------------------>
+    <h2 id="clients">O que são Clients</h2> <!--Capítulo 2-->
+    <button><a href="#inicio">voltar</a></button>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <p>Em termos simples, um <strong>client</strong> (cliente, em português) é qualquer dispositivo ou programa de software que solicita um serviço de outro dispositivo ou programa, chamado de <strong>server</strong> (servidor).
+    <br><strong>Imagine a internet como uma biblioteca gigante</strong>, você (o client) entra na biblioteca (a internet) e pede um livro específico (um serviço) ao bibliotecário (o server) e o bibliotecário busca o livro e te entrega.</p>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
+    <h3>Exemplos de Clients</h3>
     <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
+        <li><strong>Navegadores Web</strong>: Chrome, Firefox, Edge, etc. Quando você digita um endereço na barra de endereços, seu navegador envia uma solicitação ao servidor do site (como o Google) e recebe as páginas para exibir na sua tela;</li>
+
+        <li><strong>Aplicativos de E-mail</strong>: Gmail, Outlook, etc. Ao verificar seus emails, seu aplicativo cliente se conecta ao servidor de email para buscar novas mensagens;</li>
+
+        <li><strong>Clientes de Chat</strong>: WhatsApp, Telegram, etc. Quando você envia uma mensagem, o aplicativo cliente envia essa mensagem para o servidor do serviço de mensagens, que por sua vez a encaminha para o destinatário;</li>
+
+        <li><strong>Jogos Online</strong>: Ao jogar um jogo online, seu computador (ou console) é um cliente que se conecta aos servidores do jogo para interagir com outros jogadores e receber atualizações do jogo.</li>
     </ul>
 
+    <h3>Características Comuns dos Clients</h3>
+    <ul>
+        <li><strong>Interface</strong>: Os clients geralmente possuem uma interface gráfica que permite aos usuários interagir com o sistema;</li>
+        <li><strong>Solicitação de Serviço</strong>: Os clients enviam solicitações aos servidores para obter dados ou executar tarefas;</li>
+        <li><strong>Exibição de Resultados</strong>: Os clients recebem os resultados das solicitações e os apresentam ao usuário.</li>
+    </ul>
+
+    <h3>Em Resumo:</h3>
+    <p>Um client é a parte de um sistema que interage diretamente com o usuário e solicita serviços de um servidor. A relação entre client e server é fundamental para a maioria dos serviços online que utilizamos hoje em dia.</p> <!--Fim do Capítulo 2-->
+    <hr/>
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <h2 id="servers">O que são Servers</h2> <!--Capítulo 3-->
+    <button><a href="#inicio">voltar</a></button>
+
+    <p><strong>Imagine um servidor como um computador super poderoso e sempre ligado, pronto para atender a várias solicitações ao mesmo tempo</strong>. Ele funciona como um centro de armazenamento e processamento de informações, fornecendo serviços para diversos dispositivos conectados em uma rede.</p>
+    <p><strong>Em termos mais técnicos, um servidor é um software ou hardware que fornece serviços a outros dispositivos, chamados de clientes.</strong></p>
+
+    <h3>Quais serviços um servidor pode oferecer?</h3>
+    <ul>
+        <li><strong>Armazenamento de dados</strong>: Servidores armazenam grandes quantidades de dados, como arquivos, bancos de dados e páginas web;</li>
+        <li><strong>Processamento</strong>: Realizam cálculos complexos e processam informações para os clientes;</li>
+        <li><strong>Comunicação</strong>: Facilitam a comunicação entre dispositivos, como em um chat ou em uma videoconferência;</li>
+        <li><strong>Acesso a recursos</strong>: Permitem que os clientes acessem recursos compartilhados, como impressoras ou arquivos.</li>
+    </ul>
+
+    <h3>Exemplos de Servidores</h3>
+    <ul>
+        <li><strong>Servidores Web</strong>: Hospedam sites e aplicativos web, como o Google, Facebook e Amazon;
+        </li>
+        <li><strong>Servidores de E-mail</strong>: Armazenam e gerenciam emails;
+        </li>
+        <li><strong>Servidores de banco de dados</strong>: Armazenam e organizam grandes volumes de dados;</li>
+        <li><strong>Servidores de jogos</strong>: Hospedam jogos online, permitindo que jogadores de diferentes lugares se conectem e joguem juntos.</li>
+    
+    </ul>
+
+    <h3>Qual a diferença entre um servidor e um computador pessoal?</h3>
+
+    <ul>
+        <li><strong>Capacidade</strong>: Servidores geralmente possuem hardware mais potente e sistemas de armazenamento maiores para lidar com grandes cargas de trabalho;</li>
+        <li><strong>Disponibilidade</strong>: Servidores são projetados para funcionar 24 horas por dia, 7 dias por semana, com alta disponibilidade;</li>
+        <li><strong>Software</strong>: Servidores executam software especializado para fornecer serviços específicos, como servidores web, servidores de banco de dados, etc.</li>
+    </ul>
+
+    <h3>Em Resumo:</h3>
+    <p>Servidores são a espinha dorsal da internet, fornecendo os serviços que utilizamos diariamente. Eles permitem que bilhões de pessoas se conectem e compartilhem informações em todo o mundo.</p> <!--Fim do capítulo 3-->
+    <hr/>
+<!------------------------------------------------------------------------------------------------------------------>
+    <h2 id="estrutura">Como é uma estrutura básica de um HTML?</h2> <!--Capítulo 4-->
+    <button><a href="#inicio">voltar</a></button>
+    <p>Um arquivo HTML (HyperText Markup Language) é como um rascunho para uma página web. Ele define a estrutura e o conteúdo que você vê em um navegador.</p>
+
+    <h3>A estrutura básica de um arquivo HTML é composta por três elementos principais:</h3>
+
+    <ol> 
+        <li><strong>&lt;!DOCTYPE html&gt;</strong>: Essa declaração indica ao navegador que o documento é um arquivo HTML5;</li>
+        <li><strong>&lt;html&gt;&lt;/html&gt;</strong>:>: Essa tag engloba todo o conteúdo da página. É como a "caixa" que contém tudo;</li>
+        <li><strong>&lt;head&gt;&lt;/head&gt;</strong>: A seção "cabeçalho" contém informações sobre a página, como o título, metadados e links para arquivos CSS;</li>
+        <li><strong>&lt;body&gt;&lt;/body&gt;</strong>: A seção "corpo" contém o conteúdo visível da página, ou seja, tudo o que o usuário verá no navegador.</li>
+    </ol>
+    <h3>Em Resumo:</h3>
+    <p>A estrutura básica do HTML fornece a base para criar páginas web. Ao entender esses elementos, você poderá começar a construir seus próprios sites e aplicativos web.</p> <!--Fim do capítulo 4-->
+    <hr/>
+<!------------------------------------------------------------------------------------------------------------------>
+    <h2 id="listas">Entendendo a diferença entre listas ordenadas e não ordenadas</h2> <!--Capítulo 5-->
+    <button><a href="#inicio">voltar</a></button>
+
+    <p>As listas são elementos essenciais na criação de páginas web, permitindo organizar informações de forma clara e concisa. Em HTML, temos dois tipos principais de listas: <strong>ordenadas e não ordenadas</strong>.</p>
+
+    <h3>Listas Ordendas (&lt;ol&gt&lt;/ol&gt;)</h3>
+    <ul>
+        <li>Características:</li>
+        <ul>
+            <li>Os itens da lista são apresentados em uma ordem específica, numerados de forma sequencial;</li>
+            <li>A numeração pode ser numérica (1, 2, 3), alfabética (a, b, c) ou romana (i, ii, iii);</li>
+            <li>A ordem dos itens é significativa e a alteração da ordem pode mudar o sentido da lista.
+            </li>
+        </ul>
+        <li>Uso:</li>
+        <ul>
+            <li>Passos de um tutorial;</li>
+            <li>Lista de ingredientes em uma receita;</li>
+            <li>Ranking de itens.</li>
+        </ul>
+    </ul>
+
+    <h3>Listas Não Ordenadas (&lt;ul&gt&lt;/ul&gt;)</h3>
+    <ul>
+        <li>Características:</li>
+        <ul>
+            <li>s itens da lista não possuem uma ordem específica, sendo apresentados com marcadores (como bolinhas);</li>
+            <li>A ordem dos itens não é importante para o significado da lista;</li>
+            <li>Os marcadores podem ser personalizados com CSS.
+            </li>
+        </ul>
+        <li>Uso:</li>
+        <ul>
+            <li>Lista de itens relacionados, mas sem uma ordem específica;</li>
+            <li>Menu de navegação;</li>
+            <li>Lista de links.</li>
+        </ul>
+    </ul>
+
+    <h3>Escolhendo o tipo de lista certo</h3>
+    <ul>
+        <li><strong>Lista ordenada</strong>: Utilize quando a ordem dos itens for crucial para a compreensão do conteúdo;</li>
+        <li><strong>Lista não ordenada</strong>:  Utilize quando a ordem dos itens não for importante e você quiser apenas agrupar itens relacionados.</li>
+    </ul>
+
+    <h3>Em Resumo:</h3>
+    <p>A escolha entre uma lista ordenada e não ordenada depende da forma como você deseja apresentar as informações. Ao entender as diferenças entre os dois tipos, você poderá criar listas mais claras e eficazes em suas páginas web.</p><!--Fim do capítulo 5-->
+    <hr/>
+<!------------------------------------------------------------------------------------------------------------------>
+
+    <h3 id="links">Links de Referência:</h3>
+    <button><a href="#inicio">voltar</a></button>
+    <ul>
+        <li>Dio.me: <a href="https://web.dio.me" target="_blank">https://web.dio.me</a></li>
+        <li>W3S School: <a href="https://www.w3schools.com/html/default.asp" target="_blank">https://www.w3schools.com/html/default.asp</a></li>
+    </ul>
 </body>
 </html>
