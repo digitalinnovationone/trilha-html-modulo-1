@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumão Prático de HTML</title>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Guia Prático de HTML 🚀</h1>
+        <p>Um resumo completo dos aprendizados, feito 100% com HTML!</p>
+        <hr />
+    </header>
+
+    <nav id="indice">
+        <h2>Índice de Aulas</h2>
+        <p>Navegue pelos tópicos abaixo para ir direto ao que interessa.</p>
+        <ul>
+            <li><a href="#aula1"><strong>Aula 1:</strong> Introdução ao HTML na Prática</a></li>
+            <li><a href="#aula2"><strong>Aula 2:</strong> Trabalhando com Formulários</a></li>
+            <li><a href="#aula3"><strong>Aula 3:</strong> Estruturando e Formatando</a></li>
+            <li><a href="#aula4"><strong>Aula 4:</strong> Trabalhando com Mídias</a></li>
+            <li><a href="#aula5"><strong>Aula 5:</strong> Criando Tabelas em HTML</a></li>
+            <li><a href="#aula6"><strong>Aula 6:</strong> Entendendo HTML Semântico</a></li>
+        </ul>
+        <hr />
+    </nav>
+
+    <main>
+        <section id="aula1">
+            <header>
+                <h2> Aula 1: Introdução ao HTML na Prática 뼈</h2>
+            </header>
+            
+            <article>
+                <h3>O que é o HTML?</h3>
+                <p>
+                    Sabe quando você acessa um site? Tudo que você vê – textos, imagens, botões – é organizado por uma linguagem chamada <strong>HTML</strong>. A sigla significa <abbr title="HyperText Markup Language">HTML</abbr>, que em português é "Linguagem de Marcação de Hipertexto". Pense nele como o <i>esqueleto</i> de uma página. Ele não a deixa bonita (isso é trabalho para o CSS), mas define toda a sua estrutura.
+                </p>
+
+                <h3>O que são Tags?</h3>
+                <p>
+                    Para criar esse esqueleto, usamos as <strong>tags</strong>. Elas são como etiquetas que dizem ao navegador o que cada coisa é. Por exemplo, a tag <code>&lt;p&gt;</code> diz "isto é um parágrafo". A maioria das tags tem uma abertura (<code>&lt;p&gt;</code>) e um fechamento (<code>&lt;/p&gt;</code>), e o conteúdo fica no meio. Elas são o coração do HTML!
+                </p>
+
+                <h3>Atributos das Tags</h3>
+                <p>
+                    Às vezes, só a etiqueta não basta. Precisamos dar informações extras, e para isso usamos os <strong>atributos</strong>. Eles ficam dentro da tag de abertura. Por exemplo, na tag de link <code>&lt;a&gt;</code>, o atributo <code>href</code> diz para onde o link deve levar: <code>&lt;a href="https://google.com"&gt;</code>. Cada atributo tem um nome e um valor.
+                </p>
+
+                <h3>Listas Ordenadas e Não Ordenadas</h3>
+                <p>
+                    Quando queremos listar coisas, temos duas opções principais:
+                </p>
+                
+                <h4>Lista Não Ordenada (<code>&lt;ul&gt;</code>)</h4>
+                <p>Use quando a ordem não importa. É a famosa lista com "bolinhas".</p>
+                <ul>
+                    <li>Café</li>
+                    <li>Açúcar</li>
+                    <li>Leite</li>
+                </ul>
+
+                <h4>Lista Ordenada (<code>&lt;ol&gt;</code>)</h4>
+                <p>Use para um passo a passo, onde a sequência é crucial.</p>
+                <ol>
+                    <li>Ferver a água.</li>
+                    <li>Passar o café.</li>
+                    <li>Servir.</li>
+                </ol>
+
+                <h3>Links (Tag &lt;a&gt; - Âncora)</h3>
+                <p>
+                    A tag <code>&lt;a&gt;</code> (de âncora) é o que torna a web... uma teia! Ela nos permite pular de uma página para outra, ou até mesmo para outra parte da mesma página, como fiz no índice lá em cima. <u>O atributo mais importante é o <code>href</code></u>, que define o destino.
+                </p>
+            </article>
+            <a href="#indice">Voltar ao topo</a>
+            <hr />
+        </section>
+
+        <section id="aula2">
+            <header>
+                <h2> Aula 2: Trabalhando com Formulários em HTML 📋</h2>
+            </header>
+            
+            <article>
+                <h3>Construindo um Formulário de Contato</h3>
+                <p>Formulários são essenciais para interagir com o usuário. Usamos a tag <code>&lt;form&gt;</code> para agrupar todos os campos. Veja um exemplo prático:</p>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend><strong>Informações Pessoais</strong></legend>
+                        
+                        <p>
+                            <label for="nome">Nome:</label><br>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                        </p>
+
+                        <p>
+                            <label for="email">E-mail:</label><br>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+                        </p>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend><strong>Opções</strong></legend>
+
+                        <p>Qual seu nível de conhecimento em HTML?</p>
+                        <input type="radio" id="iniciante" name="nivel" value="iniciante">
+                        <label for="iniciante">Iniciante</label><br>
+                        <input type="radio" id="intermediario" name="nivel" value="intermediario">
+                        <label for="intermediario">Intermediário</label><br>
+                        
+                        <p>Quais tecnologias você quer aprender?</p>
+                        <input type="checkbox" id="css" name="tech" value="css">
+                        <label for="css">CSS</label><br>
+                        <input type="checkbox" id="js" name="tech" value="js">
+                        <label for="js">JavaScript</label><br>
+
+                        <p>
+                            <label for="pais">De onde você é?</label><br>
+                            <select id="pais" name="pais">
+                                <option value="br">Brasil</option>
+                                <option value="pt">Portugal</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </p>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><strong>Sua Mensagem</strong></legend>
+                        <p>
+                            <textarea name="mensagem" rows="5" cols="40" placeholder="Deixe seu comentário aqui..."></textarea>
+                        </p>
+                    </fieldset>
+
+                    <button type="submit">Enviar Formulário</button>
+                    <button type="reset">Limpar Tudo</button>
+                </form>
+
+            </article>
+            <a href="#indice">Voltar ao topo</a>
+            <hr />
+        </section>
+
+        <section id="aula3">
+            <header>
+                <h2> Aula 3: Estruturando e Formatando 🎨</h2>
+            </header>
+
+            <article>
+                <h3>Formatando Textos</h3>
+                <p>Existem várias tags para dar um "tempero" no texto. Por exemplo, você pode deixar algo em <strong>negrito</strong> para dar importância, em <i>itálico</i> para termos estrangeiros, ou <u>sublinhado</u> para um destaque visual (mas cuidado para não confundir com um link!).</p>
+
+                <h3>As Caixas Mágicas: Div e Span</h3>
+                <p>
+                    A tag <code>&lt;div&gt;</code> é como uma caixa grande (um bloco) para agrupar vários elementos. Já a <code>&lt;span&gt;</code> é uma "caixinha" pequena (em linha) para agrupar um pedaço de texto dentro de um parágrafo, por exemplo. Elas são neutras e servem principalmente para serem estilizadas com CSS.
+                </p>
+
+                <h3>Cores e a Tag &lt;font&gt; (Cuidado!)</h3>
+                <p>
+                    Antigamente, para mudar a cor de um texto, usava-se a tag <code>&lt;font&gt;</code>. Por exemplo, este texto fica <font color="red">vermelho</font> com ela.
+                    <br>
+                    <strong>Atenção:</strong> <mark>Esta tag é obsoleta!</mark> Hoje, a forma correta e moderna de definir cores é com CSS. O uso da tag <code>&lt;del&gt;&lt;font&gt;&lt;/del&gt;</code> não é mais uma boa prática.
+                </p>
+
+                <h3>Embeds e Iframes</h3>
+                <p>
+                    As tags <code>&lt;embed&gt;</code> e <code>&lt;iframe&gt;</code> permitem "embutir" conteúdo de outros lugares diretamente na sua página. Pode ser um vídeo do YouTube, um mapa do Google Maps ou até outra página da web. É como abrir uma janelinha para outro site dentro do seu. Veremos um exemplo prático na aula de mídias!
+                </p>
+
+            </article>
+            <a href="#indice">Voltar ao topo</a>
+            <hr />
+        </section>
+
+        <section id="aula4">
+            <header>
+                <h2> Aula 4: Trabalhando com Mídias 🎬</h2>
+            </header>
+
+            <article>
+                <h3>Tag &lt;img&gt;</h3>
+                <p>Para adicionar imagens, usamos a tag <code>&lt;img&gt;</code>. Ela precisa do atributo <code>src</code> (source) para indicar o caminho da imagem e do <code>alt</code> (texto alternativo) para acessibilidade.</p>
+                <figure>
+                    <img src="https://via.placeholder.com/400x150.png?text=Exemplo+de+Imagem" alt="Uma imagem de exemplo cinza com texto.">
+                    <figcaption><small>Legenda da imagem de exemplo.</small></figcaption>
+                </figure>
+
+                <h3>Tag &lt;audio&gt;</h3>
+                <p>Quer colocar um som na sua página? Use a tag <code>&lt;audio&gt;</code>. O atributo <code>controls</code> adiciona os botões de play, pause e volume.</p>
+                <audio controls>
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+
+                <h3>Tag &lt;video&gt; e &lt;track&gt;</h3>
+                <p>Para vídeos, a lógica é parecida com a do áudio. Usamos a tag <code>&lt;video&gt;</code>. A tag <code>&lt;track&gt;</code> é incrível para acessibilidade, pois permite adicionar legendas ao vídeo.</p>
+                <video width="400" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <track kind="subtitles" srclang="pt" label="Português" default>
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+
+                <h3>Tag &lt;iframe&gt; na prática</h3>
+                <p>Veja como é fácil embutir um mapa do Google Maps:</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197545236113!2d-46.65657118449419!3d-23.56133986749169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0x202115e9b15f3475!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1686859151591!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </article>
+            <a href="#indice">Voltar ao topo</a>
+            <hr />
+        </section>
+
+        <section id="aula5">
+            <header>
+                <h2> Aula 5: Criando Tabelas em HTML 📊</h2>
+            </header>
+
+            <article>
+                <h3>Estrutura de uma Tabela</h3>
+                <p>Tabelas são perfeitas para exibir dados organizados em linhas e colunas. Usamos a tag <code>&lt;table&gt;</code> para criar a tabela, <code>&lt;tr&gt;</code> para cada linha (table row), <code>&lt;th&gt;</code> para as células do cabeçalho (table header) e <code>&lt;td&gt;</code> para as células de dados (table data).</p>
+                
+                <h4>Exemplo de Tabela de Preços</h4>
+                <table border="1" cellpadding="5" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Marca</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Café em Pó</td>
+                            <td>Marca A</td>
+                            <td>R$ 15,00</td>
+                        </tr>
+                        <tr>
+                            <td>Leite Integral</td>
+                            <td>Marca B</td>
+                            <td>R$ 5,00</td>
+                        </tr>
+                        <tr>
+                            <td>Pão Francês</td>
+                            <td>Padaria Local</td>
+                            <td>R$ 0,50/un</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>Total Estimado</strong></td>
+                            <td><strong>R$ 20,50</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p><small><strong>Nota:</strong> A estilização com `border`, `cellpadding`, etc., direto no HTML é uma prática antiga. O ideal hoje é fazer tudo com CSS.</small></p>
+            </article>
+            <a href="#indice">Voltar ao topo</a>
+            <hr />
+        </section>
+
+        <section id="aula6">
+            <header>
+                <h2> Aula 6: Entendendo HTML Semântico 🧠</h2>
+            </header>
+
+            <aside>
+                <h6>Dica Rápida</h6>
+                <p>Pense na semântica como "dar nomes corretos aos bois". Em vez de usar <code>&lt;div&gt;</code> para tudo, usamos tags que descrevem o conteúdo.</p>
+            </aside>
+
+            <article>
+                <h3>O que é HTML Semântico?</h3>
+                <p>HTML Semântico é a prática de usar tags HTML que realmente descrevem o significado do conteúdo que elas envolvem. Por exemplo, em vez de usar uma <code>&lt;div&gt;</code> para o cabeçalho, usamos a tag <code>&lt;header&gt;</code>. Isso ajuda os navegadores, os mecanismos de busca (como o Google) e as tecnologias assistivas (para pessoas com deficiência) a entenderem a estrutura da sua página. <mark>O resultado é um site mais acessível e com melhor SEO!</mark></p>
+                
+                <blockquote>"O poder da Web está em sua universalidade. O acesso por todos, independentemente de deficiência, é um aspecto essencial."
+                    <cite>- Tim Berners-Lee, inventor da World Wide Web</cite>
+                </blockquote>
+
+                <h3>As Principais Tags Semânticas</h3>
+                <ul>
+                    <li><code>&lt;header&gt;</code>: Para o cabeçalho do site ou de uma seção.</li>
+                    <li><code>&lt;nav&gt;</code>: Para agrupar os links de navegação principal.</li>
+                    <li><code>&lt;main&gt;</code>: Para o conteúdo principal e único da página.</li>
+                    <li><code>&lt;section&gt;</code>: Para agrupar um bloco de conteúdo temático.</li>
+                    <li><code>&lt;article&gt;</code>: Para um conteúdo autossuficiente, como um post de blog.</li>
+                    <li><code>&lt;aside&gt;</code>: Para conteúdo lateral, como uma barra de dicas.</li>
+                    <li><code>&lt;footer&gt;</code>: Para o rodapé do site ou de uma seção.</li>
+                    <li><code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code>: Para agrupar uma imagem/mídia à sua legenda.</li>
+                </ul>
+
+                <h3>Acessibilidade e SEO</h3>
+                <p>
+                    Usar semântica correta melhora a <strong>acessibilidade</strong>, pois ajuda leitores de tela a navegar de forma lógica pela página (pulando direto para o <code>&lt;main&gt;</code>, por exemplo). Também melhora o <abbr title="Search Engine Optimization">SEO</abbr>, pois o Google entende melhor sobre o que é seu site e consegue ranqueá-lo de forma mais eficiente. A fórmula é simples: HTML<sup>5</sup> + Semântica = ❤️.
+                </p>
+                <p>
+                    O Web Scraping<sub>1</sub> (coleta de dados da web) também se beneficia, pois robôs conseguem extrair informações de sites semânticos com muito mais precisão.
+                </p>
+                <p><sub>1</sub><small> - Técnica de extração de dados de sites da web de forma automatizada.</small></p>
+
+            </article>
+            <a href="#indice">Voltar ao topo</a>
+            <hr />
+        </section>
+    </main>
+    
+    <footer>
+        <h3>Referências e Fontes</h3>
+        <p>Este guia foi construído com base nos conhecimentos das aulas e com o apoio de documentações incríveis da web:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs (Mozilla)</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
+        </ul> <hr>
+
+        <section id="exemploPage">
+            <h3>Abaixo uma pagina feita com alguns ensinamentos do HTML</h3>
+            <a href="pag-exemplo.html">
+                <Button>Conhecer!</Button>
+            </a>
+        </section>
+    </footer>
+</body>
+</html>
