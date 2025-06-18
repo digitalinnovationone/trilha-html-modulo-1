@@ -14,3 +14,9 @@ Este desafio vai fazer com que tenha dúvidas, o que é ótimo! Aos poucos você
 Após concluído este desafio! Siga para o <strong>Módulo II - Conceitos Básicos.</strong>
 
 Nos vemos lá!
+
+# O que foi feito:
+## Todos os requisitos do projeto foram cumpridos, também foi adicionado style, sidebar, iframe e responsividade na página
+![image](https://github.com/user-attachments/assets/6aaa64fc-1a45-4892-a408-ff06f24d22b8)
+![image](https://github.com/user-attachments/assets/dfcbd556-5faf-421c-9842-8a17fc9f5809)
+

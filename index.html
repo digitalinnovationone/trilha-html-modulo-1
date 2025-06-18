@@ -1,62 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link class="icon" rel="shortcut icon" href="https://img.icons8.com/?size=100&id=20909&format=png&color=000000"
+      type="image/x-icon">
+   <title>Módulo I - Primeiros Passos com HTML</title>
 </head>
+
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
+   <nav class="header-page" id="topo">Módulo I - Primeiros Passos com HTML</nav>
+   <div id="container">
 
-    <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
-    <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
-    </ul>
+      <!-- <hr /> -->
+      <nav class="menu-lateral">
+         <h2>Índice</h2>
+         <hr>
+         <!-- <h1 id="topo">Módulo 1 - Primeiros Passos com HTML</h1> -->
+         <!-- <p>Bem-vindo ao módulo 1 do curso de HTML! Aqui você vai aprender os conceitos básicos de HTML,
+            a história dos computadores e como funcionam os clientes e servidores na web.</p> -->
+         <ul>
+            <li><a href="#Historia">História dos computadores</a></li>
+            <li><a href="#Clients">O que são <i>Clients</i>?</a></li>
+            <li><a href="#Servers">O que são <i>Servers</i>?</a></li>
+            <li><a href="#estrutura">Como é uma estrutura básica de um HTML?</a></li>
+            <li><a href="#listas">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
+            <li><a href="#outras">Outras tags e exemplos</a></li>
+            <li><a href="#referencias">Links de referências</a></li>
+         </ul>
+         <hr>
+      </nav>
+      <main class="conteudo-principal">
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+         <h2 id="Historia">História dos computadores</h2>
+         <p>A história dos computadores é marcada por grandes avanços tecnológicos que transformaram o modo como
+            vivemos,
+            trabalhamos e nos comunicamos. Ela pode ser dividida em gerações:</p>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+         <h2>1. Pré-história dos Computadores</h2>
+         <ul>
+            <li><strong>Ábaco</strong> (cerca de 2400 a.C.): usado para fazer contas simples.</li>
+            <li><strong>Máquina de Pascal</strong> (1642): inventada por Blaise Pascal para somar e subtrair.</li>
+            <li><strong>Máquina Analítica</strong> (1837): idealizada por Charles Babbage, considerada o primeiro modelo
+               de
+               computador programável.</li>
+         </ul>
+         <p><a href="#topo">Voltar ao topo</a></p>
 
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+         <h2>2. Primeira Geração (1940-1956) – Válvulas</h2>
+         <p>Usavam válvulas eletrônicas, eram enormes, lentos e consumiam muita energia. Exemplo: <a
+               href="https://pt.wikipedia.org/wiki/ENIAC" target="_blank"><strong>ENIAC</strong></a>
+            (1946), primeiro computador eletrônico de uso geral.</p>
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <h2>3. Segunda Geração (1956-1964) – Transistores</h2>
+         <p>Substituíram as válvulas por transistores, tornando os computadores menores e mais eficientes. Surgem
+            linguagens
+            como <a href="https://www.ibm.com/docs/pt/i/7.3.0?topic=languages-cobol"
+               target="_blank"><strong>COBOL</strong></a> e <a href="https://fortran-lang.org/" target="_blank">
+               <strong>FORTRAN</strong></a>.</p>
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <h2>4. Terceira Geração (1964-1971) – Circuitos Integrados</h2>
+         <p>Uso de chips com circuitos integrados. Computadores mais rápidos e confiáveis. Início dos primeiros
+            computadores
+            pessoais.</p>
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <h2>5. Quarta Geração (1971 até hoje) – Microprocessadores</h2>
+         <p>Surgem os <strong>microprocessadores</strong>, com computadores mais acessíveis. Consolidação de empresas
+            como
+            <a href="https://www.apple.com/br/" target="_blank"><strong>Apple</strong></a>,
+            <a href="https://www.ibm.com/br-pt" target="_blank"><strong>IBM</strong></a> e
+            <a href="https://www.microsoft.com/pt-br" target="_blank"><strong>Microsoft</strong></a>.
+         </p>
+         <p><a href="#topo">Voltar ao topo</a></p>
 
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+         <h2>6. Quinta Geração e o Futuro – Inteligência Artificial</h2>
+         <p>Foco em <strong>Inteligência Artificial</strong>, <strong>machine learning</strong> e <strong>computação
+               quântica</strong>. Computadores que aprendem e se adaptam, como assistentes virtuais e carros autônomos.
+         </p>
 
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
-    <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
-    </ul>
 
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <hr>
+         <h2 id="clients">O que são <i>Clients</i>?</h2>
+
+         <p>
+            Um <strong><i>client</i></strong> (ou cliente) é qualquer dispositivo ou programa que envia requisições para
+            um
+            servidor.
+            Normalmente, é o lado do usuário em uma comunicação na internet.
+         </p>
+
+         <p>
+            Por exemplo, quando você acessa um site pelo navegador (<i>Google Chrome</i>, <i>Firefox</i>, etc.), seu
+            navegador
+            atua como um <u><strong>cliente</strong></u>.
+            Ele envia uma solicitação para o <strong>servidor</strong> onde o site está hospedado, e o servidor devolve
+            os
+            dados da página.
+         </p>
+
+         <p>
+            Outros exemplos de <strong>clients</strong> são:
+         <ul>
+            <li>Aplicativos de celular</li>
+            <li>Jogos online</li>
+            <li>Programas de e-mail como o Outlook</li>
+         </ul>
+         </p>
+
+         <p>
+            Para saber mais, veja este link:
+            <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview"
+               target="_blank">
+               MDN Web Docs - Visão geral Client x Server
+            </a>
+         </p>
+
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <hr>
+         <h2 id="servers">O que são <i>Servers</i>?</h2>
+
+         <p>
+            Um <strong><i>server</i></strong> (ou servidor) é um computador ou programa que fornece serviços, dados ou
+            recursos para outros computadores, chamados de <u><strong>clients</strong></u>.
+         </p>
+
+         <p>
+            Quando você acessa um site, o servidor é responsável por armazenar os arquivos HTML, CSS, imagens, bancos de
+            dados, etc., e <strong>enviar</strong> essas informações para o seu navegador (o cliente).
+         </p>
+
+         <p>
+            Existem diferentes tipos de servidores, como:
+         <ul>
+            <li><strong>Servidor Web</strong>: envia páginas da web (ex: Apache, Nginx)</li>
+            <li><strong>Servidor de Arquivos</strong>: compartilha arquivos na rede</li>
+            <li><strong>Servidor de Banco de Dados</strong>: armazena e gerencia dados (ex: MySQL)</li>
+         </ul>
+         </p>
+
+         <p>
+            Para saber mais sobre o funcionamento dos servidores, veja este link:
+            <a href="https://www.controle.net/faq/o-que-sao-servidores#:~:text=Como%20defini%C3%A7%C3%A3o%20rudimentar%2C%20podemos%20considerar,de%20uma%20rede%20local%20ou"
+               target="_blank">
+               O que é um servidor? – Controle Net
+            </a>
+         </p>
+
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <hr>
+         <h2 id="estrutura">Como é uma estrutura básica de um HTML?</h2>
+         <p>Veja abaixo:</p>
+         <blockquote>
+            <p><code>&lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &nbsp;&nbsp;&lt;head&gt;&lt;/head&gt;<br>
+      &nbsp;&nbsp;&lt;body&gt;&lt;/body&gt;<br>
+      &lt;/html&gt;</code></p>
+         </blockquote>
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <hr>
+         <h2 id="listas">Listas ordenadas e não ordenadas</h2>
+         <h3>Lista não ordenada:</h3>
+         <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+         </ul>
+
+         <h3>Lista ordenada:</h3>
+         <ol>
+            <li>Conectar à internet</li>
+            <li>Abrir o navegador</li>
+            <li>Digitar o endereço</li>
+         </ol>
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <hr>
+         <h2 id="outras">Outras tags e exemplos</h2>
+         <p>Texto com <del>erro riscado</del> e <ins>correção</ins>.</p>
+         <p>A fórmula da água é H<sub>2</sub>O e a equação famosa é E = mc<sup>2</sup>.</p>
+         <p>
+            <font color="blue">Texto em azul usando a tag &lt;font&gt;</font> (não é mais recomendada, mas ainda
+            funciona).
+         </p>
+
+         <h3>Este é um título h3</h3>
+         <h4>Este é um título h4</h4>
+         <h5>Este é um título h5</h5>
+         <h6>Este é um título h6</h6>
+         <p>Este é um parágrafo com <strong>negrito</strong>, <em>itálico</em> e <u>sublinhado</u>.</p>
+         <p>Logo abaixo uma tag img:</p>
+         <img id="img-dio"
+            src="https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000051657/5d3d477a-eae7-4b0b-bb22-7e5e318b4eba.png"
+            alt="Imagem Digital Innovation One">
+         <p>O HTML (<abbr title="HyperText Markup Language">HTML</abbr>) é a base da web.</p>
+         <p>Este texto tem uma <mark>parte destacada</mark> para chamar atenção.</p>
+         <p>Este é um texto normal e <small>este é um texto menor, como uma observação.</small></p>
+         <p>Logo abaixo um iframe:</p>
+         <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/o0UZNUuFsvA" title="Vídeo DIO" frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen></iframe>
+         </div>
+
+
+         <p><a href="#topo">Voltar ao topo</a></p>
+         <hr>
+         <p>Feito com <strong>HTML</strong> básico! 💻</p>
+
+         <h2 id="referencias">Links de referências</h2>
+         <p>Para aprender mais sobre HTML e desenvolvimento web, confira estes links:</p>
+         <ul>
+            <li><a href="#" target="_blank">http://dio.me</a></li>
+            <li><a href="#" target="_blank">http://w3c.org</a></li>
+            <li><a href="#" target="_blank">https://developer.mozilla.org/pt-BR/docs/Web/HTML</a></li>
+         </ul>
+
+      </main>
+   </div>
+   <footer class="rodape">
+      <p>Desenvolvido por <a href="#" target="_blank" rel="noopener noreferrer"><strong>Allisson Néo</strong></a></p>
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+      <div class="social-links">
+         <a class="logo-link" href="https://github.com/allissonneo" target="_blank" rel="noopener noreferrer"><img
+               class="logo-social" src="https://img.icons8.com/?size=100&id=62856&format=png&color=ffffff"
+               alt="Logo Github"> GitHub</a> |
+         <a class="logo-link" href="https://linkedin.com/in/allissonneo" target="_blank" rel="noopener noreferrer"><img
+               class="logo-social" src="https://img.icons8.com/?size=100&id=8808&format=png&color=ffffff"
+               alt="Logo Linkedin"> LinkedIn</a>
+      </div>
+   </footer>
 </body>
+
 </html>
