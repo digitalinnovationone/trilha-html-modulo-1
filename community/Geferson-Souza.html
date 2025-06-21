@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvendando o HTML5 Semântico - Professor Geferson</title>
+    <style>
+        /* CSS Básico: Nosso Caderno de Colorir HTML5! */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Uma fonte divertida */
+            background-color: #F8F8FF; /* Fundo branquinho com um toque de azul (GhostWhite) */
+            color: #333; /* Cor do texto principal */
+            margin: 0;
+            padding: 20px; /* Um espacinho nas bordas */
+            line-height: 1.6; /* Espaçamento entre linhas para facilitar a leitura */
+            scroll-behavior: smooth; /* Para rolar suavemente na página */
+        }
+
+        /* Estilo do Cabeçalho: O Título da Nossa Aventura */
+        header {
+            background-color: #ADD8E6; /* Azul clarinho (LightBlue) */
+            color: #333;
+            padding: 25px;
+            text-align: center;
+            border-radius: 15px; /* Cantinhos arredondados */
+            margin-bottom: 30px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Uma sombrinha legal */
+            z-index: 100; /* Garante que fique por cima de outros elementos se houver sobreposição */
+        }
+        header h1 {
+            font-size: 2.5em; /* Título bem grandão */
+            color: #4682B4; /* Azul mais forte */
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1em;
+            color: #5F9EA0; /* Azul acinzentado */
+        }
+
+        /* Estilo da Navegação: O Mapa do Tesouro */
+        nav {
+            background-color: #B0E0E6; /* Azul claro (PowderBlue) */
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 30px; /* Espaçamento após o cabeçalho */
+        }
+        nav ul {
+            list-style: none; /* Remove as bolinhas da lista */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Coloca os itens lado a lado */
+            flex-wrap: wrap; /* Ajuda em telas pequenas */
+            justify-content: center;
+            gap: 15px; /* Espaço entre os botões do mapa */
+        }
+        nav ul li a {
+            text-decoration: none; /* Remove o sublinhado do link */
+            color: #0056b3; /* Cor do texto do link */
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background-color: #E0FFFF; /* Azul ciano (LightCyan) */
+            transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+        }
+        nav ul li a:hover {
+            background-color: #87CEEB; /* Azul mais forte no hover */
+        }
+
+        /* Estilo do Conteúdo Principal: Nosso Grande Quadro */
+        main {
+            max-width: 900px; /* Largura máxima da nossa aula */
+            margin: 0 auto; /* Centraliza na página */
+            padding: 20px;
+            background-color: #FFFFFF; /* Fundo branco para o conteúdo */
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidade */
+        }
+
+        /* Estilo dos Cards (Details/Summary): Nossas Caixas Mágicas */
+        details {
+            background-color: #F8F8FF; /* Fundo branquinho */
+            border: 2px solid #ADD8E6; /* Borda azul clara */
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease; /* Para uma transição suave ao abrir/fechar */
+        }
+
+        details[open] {
+            background-color: #E0FFFF; /* Fundo mais claro quando aberto */
+            border-color: #4682B4; /* Borda mais forte quando aberto */
+        }
+
+        summary {
+            background-color: #B0E0E6; /* Cor do "botão" da caixa mágica */
+            color: #333;
+            padding: 15px 20px;
+            border-radius: 12px; /* Cantinhos arredondados */
+            font-size: 1.5em; /* Texto grandão para o nome da tag */
+            font-weight: bold;
+            cursor: pointer; /* Indica que é clicável */
+            outline: none; /* Remove a linha de foco padrão */
+            display: block; /* Garante que o fundo ocupe a largura total */
+            position: relative; /* Para o ícone de seta */
+            transition: background-color 0.3s ease;
+        }
+
+        summary:hover {
+            background-color: #87CEEB; /* Cor de hover */
+        }
+
+        summary::-webkit-details-marker {
+            display: none; /* Esconde a seta padrão do Chrome/Safari */
+        }
+        summary::after {
+            content: '▼'; /* Adiciona nossa própria seta para baixo */
+            position: absolute;
+            right: 20px;
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+        details[open] summary::after {
+            content: '▲'; /* Seta para cima quando aberto */
+            transform: rotate(180deg); /* Gira a seta */
+        }
+
+        /* Conteúdo dentro das caixas mágicas */
+        .content-aula {
+            padding: 20px;
+            border-top: 1px dashed #C6E7F8; /* Linha tracejada para separar */
+            margin-top: 5px; /* Um pequeno espaçamento */
+        }
+        .content-aula h3 {
+            color: #4682B4; /* Títulos menores dentro do conteúdo */
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #C6E7F8;
+            padding-bottom: 5px;
+        }
+        .content-aula p, .content-aula ul {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        .content-aula ul {
+            list-style: disc; /* Bolinhas para as listas */
+            margin-left: 25px;
+        }
+        .content-aula .exemplo-codigo {
+            background-color: #E6FFE6; /* Verde clarinho para o código */
+            border-left: 4px solid #66BB6A; /* Linha verde na lateral */
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace; /* Fonte de código */
+            font-size: 0.9em;
+            white-space: pre-wrap; /* Mantém a formatação do código */
+            word-break: break-all;
+            overflow-x: auto; /* Adiciona scroll se o código for muito longo */
+        }
+
+        /* Estilos para tags específicas dentro das explicações */
+        .highlight {
+            background-color: #FFFF99; /* Amarelo de marca-texto */
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .tag-name {
+            color: #8B4513; /* Marrom para nomes de tags */
+            font-weight: bold;
+        }
+
+        /* Media e Formulários dentro das explicações */
+        .visual-example {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f0f8ff; /* AliceBlue */
+            border: 1px dashed #add8e6;
+            border-radius: 10px;
+        }
+        .visual-example img, .visual-example video, .visual-example iframe {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .visual-example audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .visual-example p {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Estilo da Tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            text-align: left;
+        }
+        th, td {
+            padding: 10px 12px;
+            border: 1px solid #ADD8E6;
+        }
+        th {
+            background-color: #ADD8E6;
+            color: #333;
+            font-weight: bold;
+        }
+        tr:nth-child(even) { /* Linhas pares com cor diferente */
+            background-color: #F0F8FF; /* AliceBlue */
+        }
+        tr:hover {
+            background-color: #E0FFFF; /* LightCyan */
+        }
+
+        /* Estilo do Rodapé: A Despedida da Nossa Aventura */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            background-color: #ADD8E6;
+            color: #333;
+            border-radius: 15px;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 5px 0;
+            color: #5F9EA0;
+        }
+        footer a {
+            color: #4682B4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade para telas menores (celulares) */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            nav ul {
+                flex-direction: column; /* Links em coluna no celular */
+                gap: 10px;
+            }
+            main {
+                padding: 15px;
+            }
+            summary {
+                font-size: 1.2em;
+                padding: 12px 15px;
+            }
+            summary::after {
+                right: 15px;
+            }
+            .content-aula {
+                padding: 15px;
+            }
+            .content-aula h3 {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 Desvendando o HTML5 Semântico com o Professor Geferson! 🚀</h1>
+        <p>Olá, futuros desenvolvedores e exploradores da web! Prepare-se para uma aula interativa e divertida sobre como o HTML5 organiza o conteúdo da internet.</p>
+        <p>Clique nas caixas mágicas para desvendar os segredos de cada tag semântica!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">O que é Semântica?</a></li>
+            <li><a href="#header-tag">Header</a></li>
+            <li><a href="#nav-tag">Nav</a></li>
+            <li><a href="#main-tag">Main</a></li>
+            <li><a href="#article-tag">Article</a></li>
+            <li><a href="#section-tag">Section</a></li>
+            <li><a href="#aside-tag">Aside</a></li>
+            <li><a href="#footer-tag">Footer</a></li>
+            <li><a href="#basicas">Tags Básicas</a></li>
+            <li><a href="#formatacao">Formatação</a></li>
+            <li><a href="#listas">Listas & Links</a></li>
+            <li><a href="#tabelas">Tabelas</a></li>
+            <li><a href="#midias">Mídias</a></li>
+            <li><a href="#formularios">Formulários</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="intro">
+            <h2>🌍 O HTML5 e a Revolução Semântica: Diga Adeus à "Div Soup"! 🍲</h2>
+            <p>Antigamente, no HTML4, era comum usar a tag <span class="tag-name">&lt;div&gt;</span> para praticamente tudo. Era como ter um monte de caixas genéricas para guardar todas as suas coisas. Isso funcionava, mas era difícil para o navegador (e para nós!) entender o que cada caixa representava de verdade. Era a famosa "Div Soup" (Sopa de Divs)!</p>
+            <p>O HTML5 veio para mudar isso, trazendo <mark>tags semânticas</mark>. A palavra "semântica" significa "com significado". Agora, em vez de só `&lt;div id="header"&gt;` ou `&lt;div class="navigation"&gt;`, temos tags como <span class="tag-name">&lt;header&gt;</span> e <span class="tag-name">&lt;nav&gt;</span>, que já dizem ao navegador qual o propósito daquele conteúdo!</p>
+            <p><strong>Por que isso é tão importante?</strong></p>
+            <ul>
+                <li><strong>Organização e Clareza:</strong> Seu código fica muito mais fácil de ler e entender.</li>
+                <li><strong>SEO (Otimização para Buscadores):</strong> O Google e outros buscadores "entendem" melhor o conteúdo do seu site, o que pode ajudar ele a aparecer mais nas pesquisas!</li>
+                <li><strong>Acessibilidade:</strong> Leitores de tela para pessoas com deficiência visual conseguem navegar melhor pelo seu site, porque cada parte tem um significado claro.</li>
+            </ul>
+            <p>Para aprender mais sobre as diferenças entre HTML4 e HTML5 e a importância da semântica, confira este artigo (em inglês, mas super explicativo!): <a href="https://kalicube.com/learning-spaces/faq-list/seo-glossary/html5-semantic-tags-what-are-they/" target="_blank">HTML5 Semantic Tags: What are they? - Kalicube.com</a></p>
+            <hr>
+        </section>
+
+        <!-- CAIXA MÁGICA 1: HEADER -->
+        <details id="header-tag">
+            <summary>
+                <h2>&lt;header&gt; - O Letreiro de Boas-Vindas</h2>
+            </summary>
+            <div class="content-aula">
+                <h3>O que é?</h3>
+                <p>A tag <span class="tag-name">&lt;header&gt;</span> é como a faixa de boas-vindas do seu site ou de uma seção específica. Pense nela como o letreiro da sua loja ou o título de um livro.</p>
+                <h3>Onde usar?</h3>
+                <ul>
+                    <li>No topo da página (dentro do `&lt;body&gt;`) para o cabeçalho principal do site.</li>
+                    <li>No início de um <span class="tag-name">&lt;article&gt;</span> ou <span class="tag-name">&lt;section&gt;</span> para o cabeçalho daquela parte específica.</li>
+                </ul>
+                <h3>Por que usar?</h3>
+                <p>Indica claramente que aquele conteúdo é a introdução, onde geralmente ficam o título do site, um logo, ou uma navegação principal (que pode ser colocada dentro dele!).</p>
+                <h3>Exemplo no código:</h3>
+                <div class="exemplo-codigo">
+                    &lt;header&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="https://placehold.co/100x50/ADD8E6/4682B4?text=LOGO" alt="Logo do Site"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Meu Blog de Aventuras&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Explorando o mundo da programação e diversão!&lt;/p&gt;<br>
+                    &lt;/header&gt;
+                </div>
+                <div class="visual-example">
+                    <img src="https://placehold.co/200x100/ADD8E6/4682B4?text=Exemplo+%3CHeader%3E" alt="Exemplo visual de header">
+                    <p><i>Nosso cabeçalho com o logotipo e o título do site.</i></p>
+                </div>
+            </div>
+        </details>
+
+        <!-- CAIXA MÁGICA 2: NAV -->
+        <details id="nav-tag">
+            <summary>
+                <h2>&lt;nav&gt; - O Mapa do Tesouro</h2>
+            </summary>
+            <div class="content-aula">
+                <h3>O que é?</h3>
+                <p>A tag <span class="tag-name">&lt;nav&gt;</span> é como o mapa do tesouro do seu site! Ela guarda os links de navegação mais importantes, aqueles que levam para outras páginas ou para seções principais dentro da mesma página.</p>
+                <h3>Onde usar?</h3>
+                <ul>
+                    <li>Geralmente dentro do <span class="tag-name">&lt;header&gt;</span> ou <span class="tag-name">&lt;footer&gt;</span>.</li>
+                    <li>Pode haver múltiplos <span class="tag-name">&lt;nav&gt;</span> em uma página (ex: navegação principal e navegação secundária no rodapé).</li>
+                </ul>
+                <h3>Por que usar?</h3>
+                <p>Ajuda os usuários e os buscadores a entenderem a estrutura de navegação do seu site, facilitando o acesso ao conteúdo.</p>
+                <h3>Exemplo no código:</h3>
+                <div class="exemplo-codigo">
+                    &lt;nav&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#semantica"&gt;Semântica HTML&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="https://www.dio.me/" target="_blank"&gt;Site da DIO&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;
+                </div>
+                <div class="visual-example">
+                    <p>Um exemplo de navegação funcionando:</p>
+                    <a href="https://www.dio.me/" target="_blank" style="padding: 10px 20px; background-color: #B0E0E6; border-radius: 8px; text-decoration: none; color: #333; font-weight: bold;">Visite a DIO!</a>
+                    <p><i>Botão que te leva para o site da DIO.</i></p>
+                </div>
+            </div>
+        </details>
+
+        <!-- CAIXA MÁGICA 3: MAIN -->
+        <details id="main-tag">
+            <summary>
+                <h2>&lt;main&gt; - O Palco Principal</h2>
+            </summary>
+            <div class="content-aula">
+                <h3>O que é?</h3>
+                <p>A tag <span class="tag-name">&lt;main&gt;</span> é o "coração" da sua página! Ela contém todo o conteúdo mais importante e único que a página oferece. Pense nela como o palco principal de um show: é onde a atração principal acontece!</p>
+                <h3>Onde usar?</h3>
+                <ul>
+                    <li>Sempre diretamente dentro do <span class="tag-name">&lt;body&gt;</span>.</li>
+                    <li><strong>Importante:</strong> Só pode haver <strong>UMA</strong> tag <span class="tag-name">&lt;main&gt;</span> por página!</li>
+                </ul>
+                <h3>Por que usar?</h3>
+                <p>Indica aos navegadores e leitores de tela qual é o conteúdo principal da página, ignorando cabeçalhos, rodapés e barras laterais. Isso é ótimo para acessibilidade e SEO!</p>
+                <h3>Exemplo no código:</h3>
+                <div class="exemplo-codigo">
+                    &lt;body&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;...&lt;/header&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Todo o conteúdo importante da página fica aqui --&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;article&gt;...&lt;/article&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;...&lt;/section&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/main&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;...&lt;/footer&gt;<br>
+                    &lt;/body&gt;
+                </div>
+                <div class="visual-example">
+                    <p><i>Imagine este espaço como o centro das atenções da sua página!</i></p>
+                    <img src="https://placehold.co/200x150/F6D9EC/4682B4?text=Main+Content" alt="Exemplo visual de main">
+                </div>
+            </div>
+        </details>
+
+        <!-- CAIXA MÁGICA 4: ARTICLE -->
+        <details id="article-tag">
+            <summary>
+                <h2>&lt;article&gt; - Uma História Completa</h2>
+            </summary>
+            <div class="content-aula">
+                <h3>O que é?</h3>
+                <p>A tag <span class="tag-name">&lt;article&gt;</span> é como um "mini-documento" ou uma "história completa" dentro da sua página. É um conteúdo que faz sentido por si só, mesmo que seja copiado e colado em outro lugar.</p>
+                <h3>Onde usar?</h3>
+                <ul>
+                    <li>Postagens de blog, notícias, comentários de usuários, widgets ou qualquer item de conteúdo independente.</li>
+                    <li>Pode ter seu próprio <span class="tag-name">&lt;header&gt;</span> e <span class="tag-name">&lt;footer&gt;</span> internos.</li>
+                </ul>
+                <h3>Por que usar?</h3>
+                <p>Ajuda os buscadores e leitores de tela a identificar blocos de conteúdo reutilizáveis e independentes na sua página.</p>
+                <h3>Exemplo no código:</h3>
+                <div class="exemplo-codigo">
+                    &lt;article&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Minhas Dicas de Programação!&lt;/h3&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Para aprender HTML, é importante praticar muito...&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="https://placehold.co/250x150/E4D9F6/4682B4?text=Dica+de+C%C3%B3digo" alt="Dica de Código"><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;&lt;small&gt;Publicado em: 21/06/2025&lt;/small&gt;&lt;/footer&gt;<br>
+                    &lt;/article&gt;
+                </div>
+                <div class="visual-example">
+                    <p><i>Aqui, uma imagem dentro do nosso artigo, ilustrando uma dica!</i></p>
+                    <img src="https://placehold.co/200x120/E4D9F6/4682B4?text=Minha+Dica" alt="Exemplo visual de artigo com imagem">
+                </div>
+            </div>
+        </details>
+
+        <!-- CAIXA MÁGICA 5: SECTION -->
+        <details id="section-tag">
+            <summary>
+                <h2>&lt;section&gt; - Um Capítulo ou Tema</h2>
+            </summary>
+            <div class="content-aula">
+                <h3>O que é?</h3>
+                <p>A tag <span class="tag-name">&lt;section&gt;</span> é como um "capítulo" ou uma "área temática" dentro da sua página. Ela agrupa conteúdos que estão relacionados a um mesmo assunto.</p>
+                <h3>Onde usar?</h3>
+                <ul>
+                    <li>Para dividir o conteúdo de um <span class="tag-name">&lt;main&gt;</span> ou <span class="tag-name">&lt;article&gt;</span> em partes menores e organizadas.</li>
+                    <li>Sempre deve ter um título (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) para indicar sobre o que é a seção.</li>
+                </ul>
+                <h3>Por que usar?</h3>
+                <p>Ajuda a estruturar logicamente o documento, tornando-o mais compreensível. Pense em "Sobre Mim", "Meus Produtos", "Contato" como seções.</p>
+                <h3>Exemplo no código:</h3>
+                <div class="exemplo-codigo">
+                    &lt;section&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Meus Hobbies Favoritos&lt;/h3&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Adoro cozinhar e programar!&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;audio controls&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seu navegador não suporta áudio.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/audio&gt;<br>
+                    &lt;/section&gt;
+                </div>
+                <div class="visual-example">
+                    <p><i>Um áudio divertido para acompanhar a seção sobre hobbies!</i></p>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                        Seu navegador não suporta a tag de áudio.
+                    </audio>
+                </div>
+            </div>
+        </details>
+
+        <!-- CAIXA MÁGICA 6: ASIDE -->
+        <details id="aside-tag">
+            <summary>
+                <h2>&lt;aside&gt; - A Caixa de Curiosidades</h2>
+            </summary>
+            <div class="content-aula">
+                <h3>O que é?</h3>
+                <p>A tag <span class="tag-name">&lt;aside&gt;</span> é como uma "caixa de curiosidades" ou "notas laterais". Ela guarda informações que são relacionadas ao conteúdo principal, mas que poderiam ser lidas separadamente sem atrapalhar o entendimento.</p>
+                <h3>Onde usar?</h3>
+                <ul>
+                    <li>Barras laterais (sidebars) com links relacionados, anúncios, mini-perfis, glossários, etc.</li>
+                    <li>Pode estar dentro do <span class="tag-name">&lt;main&gt;</span>, <span class="tag-name">&lt;article&gt;</span> ou <span class="tag-name">&lt;section&gt;</span>.</li>
+                </ul>
+                <h3>Por que usar?</h3>
+                <p>Ajuda a estruturar o layout e indica que aquele conteúdo é complementar, não essencial para o fluxo principal de leitura.</p>
+                <h3>Exemplo no código:</h3>
+                <div class="exemplo-codigo">
+                    &lt;aside&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Curiosidade do Dia!&lt;/h4&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Você sabia que o HTML foi criado por Tim Berners-Lee?&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe src="https://www.youtube.com/embed/M0T13L28-s8?si=eY6fMh-tGg4gA70u" width="200" height="150" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;<br>
+                    &lt;/aside&gt;
+                </div>
+                <div class="visual-example">
+                    <p><i>Um vídeo curtinho dentro da nossa curiosidade!</i></p>
+                    <iframe src="https://www.youtube.com/embed/M0T13L28-s8?si=eY6fMh-tGg4gA70u" width="250" height="180" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </details>
+
+        <!-- CAIXA MÁGICA 7: FOOTER -->
+        <details id="footer-tag">
+            <summary>
+                <h2>&lt;footer&gt; - O Rodapé da História</h2>
+            </summary>
+            <div class="content-aula">
+                <h3>O que é?</h3>
+                <p>A tag <span class="tag-name">&lt;footer&gt;</span> é o "rodapé" da sua página ou de uma seção. Ela contém informações sobre o autor, direitos autorais, links para redes sociais, contatos, etc.</p>
+                <h3>Onde usar?</h3>
+                <ul>
+                    <li>No final da página (dentro do `&lt;body&gt;`) para o rodapé principal do site.</li>
+                    <li>No final de um <span class="tag-name">&lt;article&gt;</span> ou <span class="tag-name">&lt;section&gt;</span> para informações relacionadas àquela parte específica.</li>
+                </ul>
+                <h3>Por que usar?</h3>
+                <p>Indica que aquele conteúdo é o "fim" daquela seção ou da página, e geralmente contém informações adicionais ou de navegação secundária.</p>
+                <h3>Exemplo no código:</h3>
+                <div class="exemplo-codigo">
+                    &lt;footer&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&copy; 2025 Professor Geferson. Todos os direitos de aprendizado reservados.&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="https://www.instagram.com/diogomainardes.dev/" target="_blank"&gt;Siga-me no Instagram&lt;/a&gt;<br>
+                    &lt;/footer&gt;
+                </div>
+                <div class="visual-example">
+                    <p><i>Nosso rodapé com um link importante!</i></p>
+                    <a href="https://www.dio.me/" target="_blank" style="padding: 8px 15px; background-color: #D9F6F1; border-radius: 10px; text-decoration: none; color: #333;">Site da DIO</a>
+                </div>
+            </div>
+        </details>
+
+        <hr>
+
+        <section>
+            <h2>📚 Outras Ferramentas Incríveis do HTML5! 🛠️</h2>
+            <p>Além das tags semânticas, o HTML5 tem muitas outras ferramentas para você construir sites fantásticos. Vamos explorar algumas!</p>
+
+            <!-- CAIXA MÁGICA: TAGS BÁSICAS -->
+            <details id="basicas">
+                <summary>
+                    <h3>Tags Básicas: O Alicerce da Sua Página</h3>
+                </summary>
+                <div class="content-aula">
+                    <h4>Títulos: &lt;h1&gt; a &lt;h6&gt;</h4>
+                    <p>São como os letreiros da sua loja, do maior (h1) ao menor (h6). Indicam a importância do seu texto.</p>
+                    <div class="exemplo-codigo">
+                        &lt;h1&gt;Título Grande&lt;/h1&gt;<br>
+                        &lt;h3&gt;Subtítulo Médio&lt;/h3&gt;<br>
+                        &lt;h6&gt;Detalhe Pequeno&lt;/h6&gt;
+                    </div>
+
+                    <h4>Parágrafos: &lt;p&gt;</h4>
+                    <p>Onde a gente escreve o texto normal da página, como esta explicação. Cada &lt;p&gt; é um novo parágrafo.</p>
+                    <div class="exemplo-codigo">
+                        &lt;p&gt;Este é um parágrafo de texto.&lt;/p&gt;<br>
+                        &lt;p&gt;E este é outro parágrafo.&lt;/p&gt;
+                    </div>
+
+                    <h4>Linha Horizontal: &lt;hr&gt;</h4>
+                    <p>Desenha uma linha para separar partes do seu conteúdo, como uma régua.</p>
+                    <div class="exemplo-codigo">
+                        &lt;p&gt;Seção A&lt;/p&gt;<br>
+                        &lt;hr&gt;<br>
+                        &lt;p&gt;Seção B&lt;/p&gt;
+                    </div>
+                </div>
+            </details>
+
+            <!-- CAIXA MÁGICA: FORMATAÇÃO DE TEXTO -->
+            <details id="formatacao">
+                <summary>
+                    <h3>Formatação de Texto: Dando Estilo às Palavras</h3>
+                </summary>
+                <div class="content-aula">
+                    <h4>Destaques e Ênfase</h4>
+                    <ul>
+                        <li><span class="tag-name">&lt;mark&gt;</span>: Para <mark>marcar</mark> texto, como um marca-texto amarelo.</li>
+                        <li><span class="tag-name">&lt;strong&gt;</span>: Para algo <strong class="highlight">muito importante</strong> (negrito).</li>
+                        <li><span class="tag-name">&lt;i&gt;</span>: Para <i>ênfase</i>, termos técnicos ou estrangeiros (itálico).</li>
+                        <li><span class="tag-name">&lt;u&gt;</span>: Para <u>sublinhar</u> texto.</li>
+                        <li><span class="tag-name">&lt;small&gt;</span>: Para <small>letras miúdas</small> de rodapé ou copyright.</li>
+                        <li><span class="tag-name">&lt;del&gt;</span>: Para texto <del>riscado</del>, indicando que foi removido ou está incorreto.</li>
+                    </ul>
+                    <div class="exemplo-codigo">
+                        &lt;p&gt;Texto &lt;mark&gt;marcado&lt;/mark&gt;.<br>
+                        &lt;strong&gt;Texto importante&lt;/strong&gt;.<br>
+                        &lt;i&gt;Texto em itálico&lt;/i&gt;.<br>
+                        &lt;u&gt;Texto sublinhado&lt;/u&gt;.<br>
+                        &lt;small&gt;Texto pequeno.&lt;/small&gt;<br>
+                        &lt;del&gt;Texto deletado&lt;/del&gt;.&lt;/p&gt;
+                    </div>
+
+                    <h4>Símbolos Especiais: Subscrito &lt;sub&gt; e Sobrescrito &lt;sup&gt;</h4>
+                    <p>Ótimos para fórmulas ou números pequenos.</p>
+                    <ul>
+                        <li>H<span class="tag-name"><sub>2</sub></span>O: Para textos abaixo da linha.</li>
+                        <li>2<span class="tag-name"><sup>2</sup></span>: Para textos acima da linha.</li>
+                    </ul>
+                    <div class="exemplo-codigo">
+                        &lt;p&gt;Água: H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;<br>
+                        &lt;p&gt;Potência: 2&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+                    </div>
+
+                    <h4>Citações: &lt;blockquote&gt; e &lt;cite&gt;</h4>
+                    <p>Para citar frases longas de outras pessoas, e dizer quem as disse.</p>
+                    <div class="exemplo-codigo">
+                        &lt;blockquote&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;"A educação é a arma mais poderosa que você pode usar para mudar o mundo."&lt;/p&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;cite&gt;- Nelson Mandela&lt;/cite&gt;<br>
+                        &lt;/blockquote&gt;
+                    </div>
+
+                    <h4>Abreviações: &lt;abbr&gt;</h4>
+                    <p>Para explicar siglas e abreviações quando o mouse passa por cima.</p>
+                    <div class="exemplo-codigo">
+                        &lt;p&gt;A &lt;abbr title="Digital Innovation One"&gt;DIO&lt;/abbr&gt; é incrível!&lt;/p&gt;
+                    </div>
+
+                    <h4>🚫 Cuidado: &lt;font&gt; (Aposentada!) 🚫</h4>
+                    <p>Essa tag <span style="color: red; font-weight: bold;">NÃO É MAIS USADA</span>! Ela era usada para mudar cor e tamanho do texto. Hoje, fazemos isso com CSS. É bom saber que existiu, mas não use!</p>
+                </div>
+            </details>
+
+            <!-- CAIXA MÁGICA: LISTAS E LINKS -->
+            <details id="listas">
+                <summary>
+                    <h3>Listas & Links: Organizando e Conectando</h3>
+                </summary>
+                <div class="content-aula">
+                    <h4>Listas Ordenadas: &lt;ol&gt; e &lt;li&gt;</h4>
+                    <p>Para listar itens em uma sequência numerada (passos de uma receita, por exemplo).</p>
+                    <div class="exemplo-codigo">
+                        &lt;ol&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Primeiro item&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Segundo item&lt;/li&gt;<br>
+                        &lt;/ol&gt;
+                    </div>
+                    <p>Exemplo:</p>
+                    <ol><li>Acordar</li><li>Tomar café</li><li>Programar!</li></ol>
+
+                    <h4>Listas Não Ordenadas: &lt;ul&gt; e &lt;li&gt;</h4>
+                    <p>Para listar itens com marcadores (bolinhas, quadrados), sem uma ordem específica (lista de compras).</p>
+                    <div class="exemplo-codigo">
+                        &lt;ul&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </div>
+                    <p>Exemplo:</p>
+                    <ul><li>Maçã</li><li>Banana</li><li>Laranja</li></ul>
+
+                    <h4>Links: &lt;a&gt; (Âncora)</h4>
+                    <p>A tag mais poderosa para conectar páginas! O atributo <span class="tag-name">href</span> é o destino, e <span class="tag-name">target="_blank"</span> abre em uma nova aba.</p>
+                    <div class="exemplo-codigo">
+                        &lt;a href="https://www.google.com" target="_blank"&gt;Ir para o Google&lt;/a&gt;<br>
+                        &lt;a href="#header-tag"&gt;Voltar para o Header&lt;/a&gt;
+                    </div>
+                    <p>Exemplo: <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs</a></p>
+                </div>
+            </details>
+
+            <!-- CAIXA MÁGICA: TABELAS -->
+            <details id="tabelas">
+                <summary>
+                    <h3>Tabelas: Organizando Dados em Colunas</h3>
+                </summary>
+                <div class="content-aula">
+                    <p>As tabelas são perfeitas para organizar dados em linhas e colunas, como uma planilha. Elas têm uma estrutura própria:</p>
+                    <ul>
+                        <li><span class="tag-name">&lt;table&gt;</span>: A tabela em si.</li>
+                        <li><span class="tag-name">&lt;thead&gt;</span>: O cabeçalho da tabela (títulos das colunas).</li>
+                        <li><span class="tag-name">&lt;tbody&gt;</span>: O corpo da tabela (os dados).</li>
+                        <li><span class="tag-name">&lt;tr&gt;</span>: Uma linha da tabela.</li>
+                        <li><span class="tag-name">&lt;th&gt;</span>: Uma célula de cabeçalho (negrito).</li>
+                        <li><span class="tag-name">&lt;td&gt;</span>: Uma célula de dado comum.</li>
+                    </ul>
+                    <div class="exemplo-codigo">
+                        &lt;table&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nome&lt;/th&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Idade&lt;/th&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;João&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;10&lt;/td&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                        &lt;/table&gt;
+                    </div>
+                    <p>Exemplo de uma tabela de notas:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Aluno</th>
+                                <th>Disciplina</th>
+                                <th>Nota</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Leo</td>
+                                <td>HTML</td>
+                                <td>9.0</td>
+                            </tr>
+                            <tr>
+                                <td>Maria</td>
+                                <td>CSS</td>
+                                <td>8.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+
+            <!-- CAIXA MÁGICA: MÍDIAS -->
+            <details id="midias">
+                <summary>
+                    <h3>Mídias: Imagens, Vídeos e Sons!</h3>
+                </summary>
+                <div class="content-aula">
+                    <h4>Imagens: &lt;img&gt;</h4>
+                    <p>Para colocar fotos e desenhos. O atributo <span class="tag-name">src</span> é o caminho da imagem, e <span class="tag-name">alt</span> é o texto para descrever a imagem (importante para acessibilidade!).</p>
+                    <div class="exemplo-codigo">
+                        &lt;img src="https://placehold.co/200x120/ECF6D9/4682B4?text=Minha+Imagem" alt="Desenho de um foguete"&gt;
+                    </div>
+                    <div class="visual-example">
+                        <img src="https://placehold.co/200x120/ECF6D9/4682B4?text=Minha+Imagem" alt="Desenho de um foguete">
+                        <p><i>Nosso foguete prontinho para a decolagem!</i></p>
+                    </div>
+
+                    <h4>Áudio: &lt;audio&gt;</h4>
+                    <p>Para colocar músicas ou efeitos sonoros. Use <span class="tag-name">controls</span> para mostrar os botões de play/pause.</p>
+                    <div class="exemplo-codigo">
+                        &lt;audio controls&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Seu navegador não suporta áudio.<br>
+                        &lt;/audio&gt;
+                    </div>
+                    <div class="visual-example">
+                        <audio controls>
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                            Seu navegador não suporta a tag de áudio.
+                        </audio>
+                        <p><i>Uma melodia para embalar sua jornada HTML.</i></p>
+                    </div>
+
+                    <h4>Vídeo: &lt;video&gt;</h4>
+                    <p>Para exibir vídeos diretamente na sua página. Assim como o áudio, use <span class="tag-name">controls</span>.</p>
+                    <div class="exemplo-codigo">
+                        &lt;video width="280" height="180" controls&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Seu navegador não suporta vídeo.<br>
+                        &lt;/video&gt;
+                    </div>
+                    <div class="visual-example">
+                        <video width="280" height="180" controls>
+                            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                        <p><i>Um vídeo curtinho para ilustrar!</i></p>
+                    </div>
+
+                    <h4>Incorporar Conteúdo: &lt;iframe&gt;</h4>
+                    <p>Para "encaixar" outro site ou conteúdo (como um mapa do Google Maps ou um vídeo do YouTube) dentro da sua página.</p>
+                    <div class="exemplo-codigo">
+                        &lt;iframe src="https://pt.wikipedia.org/wiki/HTML" width="250" height="150"&gt;&lt;/iframe&gt;
+                    </div>
+                    <div class="visual-example">
+                        <iframe src="https://pt.wikipedia.org/wiki/HTML" width="250" height="150" style="border:1px solid #ccc;"></iframe>
+                        <p><i>Um pedacinho da Wikipédia dentro da nossa aula!</i></p>
+                    </div>
+                </div>
+            </details>
+
+            <!-- CAIXA MÁGICA: FORMULÁRIOS -->
+            <details id="formularios">
+                <summary>
+                    <h3>Formulários: Conversando com o Usuário!</h3>
+                </summary>
+                <div class="content-aula">
+                    <h4>O Container: &lt;form&gt;</h4>
+                    <p>É a caixa que agrupa todos os campos do seu formulário. Tem atributos como `action` (para onde enviar os dados) e `method` (como enviar, ex: GET ou POST).</p>
+                    <div class="exemplo-codigo">
+                        &lt;form action="/enviar_aula" method="post"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Campos aqui --&gt;<br>
+                        &lt;/form&gt;
+                    </div>
+
+                    <h4>Entradas de Dados: &lt;input&gt;</h4>
+                    <p>A tag mais usada para capturar dados! O atributo `type` define o tipo de campo (texto, número, senha, etc.).</p>
+                    <ul>
+                        <li>`type="text"`: <input type="text" placeholder="Seu nome"></li>
+                        <li>`type="email"`: <input type="email" placeholder="seu@email.com"></li>
+                        <li>`type="password"`: <input type="password" placeholder="******"></li>
+                        <li>`type="number"`: <input type="number" placeholder="Sua idade"></li>
+                    </ul>
+                    <div class="exemplo-codigo">
+                        &lt;label for="nome"&gt;Nome:&lt;/label&gt;<br>
+                        &lt;input type="text" id="nome" name="nome"&gt;
+                    </div>
+
+                    <h4>Escolhas: Radio Buttons e Checkboxes</h4>
+                    <p>Para opções que o usuário pode marcar.</p>
+                    <ul>
+                        <li><span class="tag-name">&lt;input type="radio"&gt;</span>: Para escolher **apenas uma** opção (ex: sexo).
+                            <br><input type="radio" id="op1" name="grupo" value="1"> <label for="op1">Opção 1</label>
+                            <br><input type="radio" id="op2" name="grupo" value="2"> <label for="op2">Opção 2</label>
+                        </li>
+                        <li><span class="tag-name">&lt;input type="checkbox"&gt;</span>: Para escolher **uma ou várias** opções (ex: hobbies).
+                            <br><input type="checkbox" id="check1" name="hobbies" value="ler"> <label for="check1">Ler</label>
+                            <br><input type="checkbox" id="check2" name="hobbies" value="jogar"> <label for="check2">Jogar</label>
+                        </li>
+                    </ul>
+                    <div class="exemplo-codigo">
+                        &lt;input type="radio" name="sexo" value="m"&gt; Masculino<br>
+                        &lt;input type="checkbox" name="pizza" value="queijo"&gt; Queijo
+                    </div>
+
+                    <h4>Botões: &lt;button&gt;</h4>
+                    <p>Botões que o usuário pode clicar para enviar dados ou fazer alguma ação.</p>
+                    <div class="exemplo-codigo">
+                        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                    </div>
+                    <button type="button" style="padding: 8px 15px; background-color: #B0E0E6; border: none; border-radius: 8px; cursor: pointer;">Clique-me!</button>
+
+                    <h4>Listas Dropdown: &lt;select&gt; e &lt;option&gt;</h4>
+                    <p>Para criar menus de escolha onde o usuário seleciona uma opção de uma lista.</p>
+                    <div class="exemplo-codigo">
+                        &lt;label for="curso"&gt;Qual curso você faz?&lt;/label&gt;<br>
+                        &lt;select id="curso" name="curso"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="html"&gt;HTML5&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="css"&gt;CSS3&lt;/option&gt;<br>
+                        &lt;/select&gt;
+                    </div>
+                    <select style="padding: 5px; border-radius: 5px; border: 1px solid #ADD8E6;">
+                        <option>Opção A</option>
+                        <option>Opção B</option>
+                    </select>
+
+                    <h4>Área de Texto Longo: &lt;textarea&gt;</h4>
+                    <p>Para quando o usuário precisa escrever mensagens mais longas, como comentários.</p>
+                    <div class="exemplo-codigo">
+                        &lt;textarea name="mensagem" rows="4" cols="30"&gt;&lt;/textarea&gt;
+                    </div>
+                    <textarea rows="3" cols="20" placeholder="Escreva aqui..." style="border: 1px solid #ADD8E6; border-radius: 5px; padding: 5px;"></textarea>
+
+                    <p>Lembre-se que um formulário completo precisa de um "backend" para receber os dados! Mas o HTML cuida da parte visual.</p>
+                    <p>Material de apoio: <a href="Trabalhando com Formulários em HTML.pdf" target="_blank">Trabalhando com Formulários em HTML.pdf</a>.</p>
+                </div>
+            </details>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Aula preparada com ❤️ pelo Professor Geferson para a Trilha DIO!</p>
+        <p>Continue explorando, praticando e se divertindo com o código. A web espera por você! 🚀</p>
+        <p><a href="https://www.instagram.com/diogomainardes.dev/" target="_blank">Siga o Professor Diogo no Instagram</a> | <a href="https://www.twitch.tv/dimmbr" target="_blank">Lives na Twitch</a></p>
+        <p>Seu repositório no GitHub: <a href="https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO" target="_blank">Meu Projeto HTML5</a> (Lembre-se de mudar este link!)</p>
+        <small>&copy; 2025 Todos os direitos reservados ao aprendizado e à diversão na programação.</small>
+    </footer>
+
+</body>
+</html>
