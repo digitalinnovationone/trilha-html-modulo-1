@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+<style>
+    ul#itens li {
+        display:inline; 
+        margin-top: 20px;
+        margin-bottom: 100px;
+        padding-bottom: 50px;
+        padding-top: 20px;                
+    }
+    h2#padding {
+        padding-top: 10px;
+
+    }
+    ul li a:hover {
+        color: red;
+        background-color: lightsteelblue ;
+    }
+    
+    li a    {
+        
+        padding-left: 5px;
+        text-decoration: none;
+        padding-right: 10px;
+        font-size: 20px;
+        margin-bottom: 80px;
+        
+    }
+       
+    hr {
+        margin: 25px;  
+    }
+    a {
+      text-decoration: none;  
+    }
+    
+</style>
+
+</head>
+
+    <h1 align="center" id="inicio">Desafio 1 - Tags</h1>
+
+    <h2 align="center" id="padding">O que são tags no HTML 5</h2>
+
+    <ul id="itens" align="center">
+        <li><a href="#h1">H1 até H6</a></li>
+        <li><a href="#P">P</a></li>
+        <li><a href="#mark">MARK</a></li>
+        <li><a href="#small">SMALL</a></li>
+        <li><a href="#u">U</a></li>
+        <li><a href="#strong">STRONG</a></li>
+        <li><a href="#ol">OL</a></li>
+        <li><a href="#ul">UL</a></li>
+        <li><a href="#li">LI</a></li>
+        <li><a href="#a">A</a></li>
+        <li><a href="#hr">HR</a></li>
+        <li><a href="#sub">SUB</a></li>
+        <li><a href="#sup">SUP</a></li>
+        <li><a href="#blockquote">Blockquote</a></li>
+        <li><a href="#font">FONT</a></li>
+        <li><a href="#del">DEL</a></li>
+        <li><a href="#p">P</a></li>
+        <li><a href="#abbr">ABBR</a></li>
+    </ul>
+    <h3>Tags no HTML 5</h3>
+        <p>Tags são códigos que são usados para montar, criar uma página da web ou formatar um texto em um site</l></p>    
+   
+    <h3 id="h1">Tag H1 até h6</h3>
+    
+
+        <p>A tag H1 é usada para coisas importantes como por exemplo títulos e a tag H6 é usada para coisas menos importantes como um simples texto.</p>
+E por falar em texto, podemos falar da tag "p'. Se tiver um parágrafo, a tag "p" estará lá. Esta frase toda está dentro de uma tag "p"!
+    <h1>H1</h1> <h2>H2</h2> <h3>H3</h3> <h4>H4</h4> <h5>H5</h5> <h6>H6</h6>     
+
+    <h3 id="mark">Tag Mark</h3>
+    <a href="#inicio">Voltar</a></small>
+
+        <p>A tag "mark" é usada para sublinhar uma parte <mark>importante</mark> do texto</p>
+
+    <h3 id="small">Tag small</h3>
+    <a href="#inicio">Voltar</a></small>
+
+        <p>A tag "small" é usada para textos pequenos. Geralmente usada no rodapé da página onde ficam as informações de copyright, pequenos comentários em um texto.</p>
+        <p><small>O texto fica assim desse tamanho</small></p>
+
+    <h3 id="i">Tag I</h3>
+    <a href="#inicio">Voltar</a></small>
+
+        <p>A tag "i" é usada para deixar o texto em <i>itálico</i>. Geralmente coloca-se texto em itálico quando é um nome estrangeiro.</p>
+
+    <a href="#inicio">Voltar</a></small>
+    <h3 id="u">Tag U</h3>
+        <p>A tag "u" serve para deixar o uma palavra <u>sublinhada</u> </p>
+
+    <h3 id="strong">Tag strong</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "strong" serve para deixar uma palavra em <strong>negrito</strong></p>
+
+    <h3 id="ol">Tag ol</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "ol" é usada para criar uma lista ordenada. É usada em conjunto com a tag li que será explicada mais á adian</p>
+    <ol>
+        <li>Exemplo</li>
+        <li>Exemplo</li>
+        <li>Exemplo</li>
+    </ol>
+
+    <h3 id="ul">Tag ul</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "ul" é usada para criar uma lista não-ordenada. Nessa lista, os itens aparecem com uma bolinha (bullet).</p>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    <li>Item 3</li>
+    </ul>
+
+    <h3 id="li">Tag li</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "li" é usada para listar um item em uma lista. As duas tag "ul" e "ol" usam "li". Sem a tag "li" não seria uma lista. Se for usada apenas a tag, o item
+aparece como item de uma lista não ordernada. Como é possível ver no exemplo abaixo.</p>
+    <li>Exemplo</li>
+
+    <h3 id="a">Tag a</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "a" é usada na tag href que se usa quando se quer criar um link.</p>
+
+    <h3 id="hr">Tag HR</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "hr" é usada para criar uma linha simples. A espessura pode ser definina com CSS que seria outro tipo de códigos</p>
+        Exemplo:
+        <hr>
+
+    <h3 id="sub">Tag sub</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "sub" faz com que um número ou letra apareça embaixo de uma letra ou número.</p>
+    <p>Exemplo<sub>teste</sub></p>
+
+    <h3 id="sup">Tag sup</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "sup" faz o oposto da tag sub. Deixa a letra ou número em cima de uma letra ou número.</p>
+        <p>Exemplo<sup>teste</sup></p>
+
+    <h3 id="blockquote">Tag blockquote</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "blockquote" é usada quando se está fazendo uma citação. A citação aparece de um jeito separado do texto para melhor visualização</p>
+<p><blockquote>Essa frase está dentro de um blockquote</blockquote></p>
+
+    <h3 id="font">Tag font</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "font" era usada no HTML para definir a font no texto. Podendo ser possível alterar tamanho, cor, porém não é mais udada no 
+HTML 5. Agora é usado CSS3 para definir esses valores.</p>
+
+    <h3 id="del">Tag del</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "del" põe um traço no meio de palavra para mostrar que o conteúdo foi alterado.</p>
+        <p>Exemplo: Eu não gosto mais de <del>laranja</del> gosto de caju</p>
+
+    <h3 id="p">Tag p</h3>
+    <a href="#inicio">Voltar</a></small>
+        <p>A tag "p" é usada quando se escreve um texto ou uma frase. O "p" vem de parágrafo. Essa senteça foi escrita 
+        usando a tag p.</p>
+
+    <h3 id="abbr">Tag abbr</h3><small>
+    <a href="#inicio">Voltar</a></small>
+    <p>A tag "abbr" é usada quando tem alguma abreviação e deseja mostrar o que significa. Como por exemplo: <abbr title="Hyper Text Markup Language">HTML</abbr> 
+        basta passar o cursor em cima da palavra para ver sua descrição</p>
