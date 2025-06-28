@@ -1,62 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+    <title> O Paradigma da <abbr title = "Programação Orientada a Objetos e Modelagem Entidade - Relacionamento"> POO e Modelagem ER</abbr></title>
 </head>
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
+    <font face="Arial">
+    <h1 class="home">A Orientação a Objetos(OO) e a Modelagem de dados<sup>(ER)</sup></h1>
+    <hr>
+        <blockquote>
+        <sup>&ldquo;</sup><small>Começe de onde você está.
+        Use o que você tiver.
+        Faça o que você puder.</small><sup>&rdquo;</sup>
+        <cite><sub>Arthur Ashe</sub></cite>
+    </blockquote>
 
-    <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
+    <details>
+        <summary><i><mark>Índice do conteúdo</mark></i></summary>
+        <ol>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#classes">Classes x Objetos</a></li>
+            <li><a href="#modelo">Modelo Entidade - Relacionamento<sup>(ER)</sup></a></li>
+            <li><a href="#poo-er-relacao">Como a Orientação a Objetos se relaciona com o Modelo<sup>ER</sup><a></li>
+        </ol>
+    </details>
+   
+   <h2 id="intro">Introdução <sup><a href="#" class="home">&#11148;</a></sup></h2>
+
+    <p>Na Computação ao longo dos anos, sugiram e surgem novos conceitos e paradigmas de desenvolvimento de software.</p>
+    <p>Um dos que se consolidou até hoje é o POO(Programação Orientada a Objetos).</p>
+    <p>Diferentemente do paradigma funcional, cujo este - utiliza-se de funções para realização de cálculos/tarefas exatas - a POO possibilita ao desenvolvedor maior autonomia e integridade nas suas decisões.</p>
+    <p>A POO nada mais é do que construir software baseado em entidades e objetos do mundo real.</p>
+    <p>A POO se utiliza de diagramas de classe para visualização da modelagem de dados do negócio. </p>
+
+    <h2 id="classes"> Classes x Objetos<sup> <a href="#" class="home">&#11148;</a></sup></h2>
+    <p>Uma classe é o molde daquela entidade real a qual se quer construir. Exemplo: em um sistema de vendas, existe o Vendedor, o Produto e a Venda</p>
+    <p>Ambos são as entidades de negócio do meu projeto, ou seja, as classes</p>
+    <p>Já os objetos, são as instâncias da classe. <u>Exemplo:</u> Vendedor vend = new Vendedor();</p>
+    <p>O vend é o meu objeto criado a partir da classe Vendedor.</p>
+    <p>Em suma, classes são as entidades da ''planta'' do meu projeto enquanto os objetos são de fato, os ''tijolos'' reais.' </p>
+
+    <table border ='1'><caption><strong>POO - Vantagens</strong></caption>
+        
+        <tr>
+            <th>Modelagem do mundo real</th>
+            <th>Reutilização de código</th>
+            <th>Manutenção simplificada</th>
+            <th>Demenda do mercado</th>
+        </tr>
+        <tr>
+            <td>A POO permite que você modele sistemas complexos de uma maneira que reflete estruturas do mundo real.</td>
+            <td>Com a POO, você pode criar componentes reutilizáveis, economizando tempo e esforço no desenvolvimento.</td>
+            <td> O código orientado a objetos é geralmente mais fácil de entender e manter, especialmente em projetos grandes.</td>
+            <td>Muitas empresas usam linguagens e frameworks orientados a objetos, tornando a POO uma habilidade valiosa no mercado de trabalho.</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <table border = '1'><caption><strong>POO - Desvantagens</strong></caption>
+        <tr>
+            <th>Complexidade</th>
+            <th>Curva de aprendizado</th>
+            <th>Desempenho</th>
+        </tr>
+        <tr>
+             <td> Para projetos pequenos, a POO pode adicionar complexidade desnecessária.</td>
+             <td>Pode ser mais difícil para iniciantes entenderem os conceitos da POO.</td>
+             <td>Em alguns casos, programas orientados a objetos podem ser mais lentos que os equivalentes procedurais.</td>
+
+        </tr>
+
+
+    
+    </table>
+
+
+    <h2 id="modelo"> Modelo Entidade - Relacionamento<sup>(ER) <a href="#" class="home">&#11148;</a></sup></h2>
+    <p>Ao desenvolver um produto de software, os analistas de negócio elaboram um diagrama de entidades e seus relacionamentos </p>
+    <h3>Características</h3>
     <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
+       <li>Entidades: classes</li>
+       <li>Atributos: características da Entidade</li>
+       <li>Relacionamentos: relação entre as entidades de um sistema</li>
     </ul>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <figure>
+        <img src ="https://spaceprogrammer.com/wp-content/uploads/2017/10/diagrama-er-exemplo-1-N-004.jpg" alt ="diagrama entidade-relacionamento"/>
+    </figure>
+    <table border="1px">
+        <tr>
+            <th>Entidade</th>
+            <th>Atributo</th>
+            <th>Relacionamento</th>
+        </tr>
+        <tr>
+            <td>Pessoa</td>
+            <td>CPF, nome, idade</td>  
+        
+           
+            <td> 1 pessoa compra n motos</td>
+        </tr>
+        <tr>
+            <td>Moto</td>
+            <td>placa, modelo</td>
+           
+          
+            <td>pelo menos uma moto é vendida para 1 pessoa</td>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+        </tr>
+    </table>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2> Modelo<sup>(ER)</sup> - Vantagens x Desvantagens</h2>
+    
+    <table border="1px">
+          <caption><strong>Vantagens</strong></caption>
+            <tr>
+              <th>Simplicidade e Clareza</th>
+              <td> Facilita a compreensão da estrutura do banco de dados <br>por partes interessadas, incluindo membros não técnicos da equipe, sem a necessidade de conhecimento técnico aprofundado</td>
+            </tr>
+            <tr>
+              <th>Comunicação eficaz</th>
+               <td> Os Modelos ER servem como uma excelente ferramenta de comunicação entre projetistas, desenvolvedores e usuários finais de bancos de dados.<br>A natureza visual dos diagramas ER facilita a discussão e o feedback, garantindo que todas as partes tenham um entendimento comum da estrutura do banco de dados.</td>
+            </tr>
+            <tr>
+              <th>Integridade dos dados</th>
+              <td>Ao definir claramente os relacionamentos e restrições entre as entidades de dados, os Modelos ER ajudam a manter a integridade dos dado</td>
+            </tr>
+            <tr>
+              <th>Adaptabilidade</th>
+              <td>Os Modelos ER são adaptáveis ​​e podem ser facilmente modificados para refletir mudanças nos requisitos do sistema.<br> Essa flexibilidade é essencial em ambientes de negócios dinâmicos, onde os requisitos de dados podem evoluir ao longo do tempo. </td>
+            </tr>
+    </table>
+    <br>
+     <table border="1px">
+          <caption><strong>Desvantagens</strong></caption>
+            <tr>
+              <th>Complexidade em grandes sistemas</th>
+              <td> Embora os Modelos ER sejam simples para sistemas menores, eles podem se tornar extremamente complexos à medida que o sistema cresce.<br>Grandes bancos de dados com inúmeras entidades e relacionamentos podem resultar em diagramas complexos e difíceis de ler e gerenciar.</td>
+            </tr>
+            <tr>
+              <th>Desenvolvimento demorado</th>
+               <td> A criação de um Modelo ER pode ser demorada, especialmente para bancos de dados grandes e complexos.<br>O processo exige planejamento meticuloso e análise detalhada para garantir a precisão, o que pode atrasar o cronograma de desenvolvimento.</td>
+            </tr>
+            <tr>
+              <th>Limitado ao design lógico</th>
+              <td>Os Modelos ER concentram-se principalmente no design lógico de um banco de dados e não abordam diretamente o design físico do banco de dados.<br> Etapas adicionais são necessárias para traduzir o Modelo ER em um esquema físico, o que pode introduzir potenciais discrepâncias se não for tratado com cuidado.</td>
+            </tr>
+          
+    </table>
 
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="poo-er-relacao">Como a Orientação a Objetos se relaciona com o Modelo<sup>(ER) <a href="#" class="home">&#11148;</a></sup></h2>
+        <p>A Programação Orientada a Objetos (POO) e o Modelo Entidade-Relacionamento (ER) são abordagens complementares na modelagem de sistemas.</p>
+        <p>Enquanto o Modelo ER foca na representação das entidades, atributos e relacionamentos em um nível conceitual do banco de dados, a POO permite representar essas entidades como classes, com seus métodos e comportamentos.</p>
+        <p>Na prática, o diagrama ER pode servir como base para o design das classes em POO, ajudando a garantir que os dados e suas relações sejam corretamente representados no software.</p>
+        <p>Por exemplo, uma entidade "Pessoa" no diagrama ER geralmente se torna uma classe "Pessoa" na POO, com atributos como "nome" e "idade", e métodos relacionados às suas operações.</p>
+    </h2>
 
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <footer>
+        <h4>Referências</h4>
+        <nav>
+            <ul>
+                <li><a href="https://codigofacil.com.br/guia-programacao-orientada-a-objetos/" target="_blank">Código fácil</a></li>
+                <li><a href="https://erikasarti.com/html/setas/" target="_blank">Erika Sarti</a></li>
+                <li><a href="https://www-essaycorp-com.translate.goog/blog/advantages-and-disadvantages-of-an-er-model?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc"target="_blank">Vantagens x Desvantagens - ER</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Programação_orientada_a_objetos" target="_blank">Wikipedia: Programação Orientada a Objetos (POO)</a></li>
+            </ul>
 
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
-    <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
-    </ul>
-
+        </nav>
+        
+        <h5>Contato</h5>
+        <nav>
+            <ul>
+                <li><a href="https://www.dio.me/users/rafiislima">Dio</a></li>
+                <li><a href="https://www.linkedin.com/in/rafaela-limaa/">Linkedin</a></li>
+                <li><a href="https://github.com/rafiislima">Github</a></li>
+            </ul>
+        </nav>
+        <h6>Site utilizando as tags e semântica do html</h6>
+        <p><del>A tag font está depreciada a partir do HTML5</del></p>
+        
+    </footer>
+    </font>
 </body>
 </html>
