@@ -1,62 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+    <title>Codificação base do HTML</title>
 </head>
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
-
+    <h1>
+        <cite>
+            <mark style="background: linear-gradient(to right, lightblue, rgb(77, 77, 252)); 
+            padding: 0, 0,2em; 
+            border-radius: 0,2em ;"
+            >Tags e Atributos do HTML
+            </mark>
+        </cite>
+    </h1>
+        <hr />
+    
     <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
-    <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
-    </ul>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+        <ul>
+            <li><a href="#formatação">tag-formatação</a></li>
+            <li><a href="#atributos">atributos-tags</a></li>
+            <li><a href="#multimídias">Imagens-Áudios-Vídeos</a></li>
+             <li><a href="#style-script">Style-Script</a></li>
+        </ul> 
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="formatação">Tags de formatação</h2>
+        <blockquote>
+           <h3>São tags que ajudam a aprimorar e organizar a experiência do(s) usuário(s) ao ler um texto de uma imagem, podendo modifica-las dentro de um contexto, como exemplo; em títulos, citações, paragrafação, ordenamentos, paragrafação e outros. Essas tags são muitos importantes, pois elas definem as funcionalidades que cada area do site será atribuído de acordo com as necessidades e de seu propósito.</h3>
+            
+            <p>Exemplos de tags de formatação "< >":</p><i><strong>
+                <em>
+                 <ul>
+                    <li>time - Usado com o atributo datetime, tem a função de marcar valores de data e hora com peso semântico, ou seja, é entendido tanto pelo computador quanto pelo usuário. Pode ser definido pela data e hora, só a data ou só às horas dentro das aspas do atributo, ex:<mark style="background-color:rgba(244, 242, 143, 0.999); border-radius: 5px ;">"datetime="2025/07/01T20:30">hoje às 20:30h"</mark></li>
+                    <li>i - Deixa o termo escrito em itálico, normalmete usado para citações ou estrangeirismos. Aliás, esta tag está sendo usada neste texto.</li>
+                    <li>mark - Ele é usado para destacar um termo a se ter atenção ou interesse</li>
+                    <li>a - Versátil, esta tag é comumente conhecida como "âncora", ou seja, ela cria um link entre outras partes de um site, até dentro da mesma página ou entre outros sites.</li>
+                 </ul>      
+                </em>
+            </strong></i>
+        </blockquote>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="atributos">Atributos das Tags no HTML</h2>
+        <blockquote>
+          <h3>São "marcadores" que indicam uma função específica àquela tag. Não terá efeito em codigos não identados pertencentes a ela, sendo necessário toda vez sua utilização em tags não identadas.</h3>
 
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+            </p>Exemplos de Atributos"":</p><i><strong>
+                <em>
+                    <ul>
+                        <li>class - Este atributo premite que você aplique recursos do CSS e JavaScript em arquivos identados.</li>
+                        <li>href - Usado em tags relacionado à links, ele define aonde esse elemento será destinado.</li>
+                        <li>id - É usado para identificar um elemento específico, não podendo ser utilizado o atributo "id" duas vezes para o mesmo elelmento em uma página.</li>
+                    </ul>
+                </em>
+            </strong></i>
+        </blockquote>
 
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="multimídias">Imagens, Áudios e Vídeos</h2>
+        <blockquote>
+           <h3>São anexações de aquivos externos cujo objetivo, é de enrriquecer o conteúdo da página, seja para referências, ou adicionar informações oriundas de outras fontes de cunho educativo, informativo(notícias) e outros.</h3>
 
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
-    <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
-    </ul>
+            <p>Exemplos de Tags Imagens, Audios e Vídeos "< >" </p><i><strong>
+                <em>
+                    <ul>
+                        <li>img - Esta tag, adiciona uma ou mais imagens à página, ela é muito interessante pois, ajuda na ilustração de textos, representações de matérias jornalisticas e de curiosidades.</li>
+                        <li>Figcaption - Insere uma descirção de imagem, exibindo informações adicionais ao referido.</li>
+                        <li>Source - define a fonte que mídia de imagem, audio e/ou vídeo foi retirado.</li>
+                        <li>audio e video - Insere um tipo de audio e/ou vídeo à pagina ou site.</li>
+                    </ul>
+                </em>
+            </i></strong>
+        </blockquote>
+    
+     <h2 id="style-script">As tags Style e Script (Bônus)</h2>
+        <blockquote>
+            <h3>São tags que importam funcionalidades de CSS e JavaScript, onde, poder-se-á ser feito codigos das duas linguagens dentro do arquivo HTML ou <i>linkar</i> arquivos diferentes para o HTML, atribuindo todas as funcionalidades que essas linguagens podem fornecer ao projeto.</h3>
+        </blockquote>
 
 </body>
 </html>
