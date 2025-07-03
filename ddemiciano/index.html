@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com HTML</title>
+    <style>
+        * {
+            background-color: lightgray;
+        }
+        small {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        table tr td {
+            padding: 6px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="inicio">Módulo 1 - Primeiros passos com HTML</h1>
+    </header>
+    <main>
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#estrutura">Estrutura básica do HTML</a></li>
+            <li><a href="#definindo-tags">O que são tags?</a></li>
+            <li><a href="#tags-aprendidas">As tags aprendidas neste Módulo</a></li>
+            <li><a href="#referencias">Referências</a></li>
+        </ul>
+
+        <h2 id="estrutura">Estrutura básica do HTML</h2>
+        <p>A estrutura básica de um documento HTML consiste em três elementos principais: 
+            <small>&lt;html&gt;</small>, <small>&lt;head&gt;</small> e <small>&lt;body&gt;</small>.
+            <ul>
+                <li>A tag <small>html</small> é o elemento raiz de um documento HTML e contém todo o conteúdo da página.</li>
+                <li>A tag <small>head</small> contém informações sobre o documento HTML que não são visíveis na página, mas são importantes para o navegador e outros serviços web.</li>
+                <li>A tag <small>body</small> contém o conteúdo visível da página, como: texto, imagens, vídeos, etc.</li>
+            </ul>
+        </p>
+        <p>Além disso, incluímos no início do arquivo html a linha <small>&lt;!DOCTYPE html&gt;</small>
+            que informa ao navegador que o documento é um documento HTML5.
+        </p>
+        <p><a href="#inicio" title="Voltar ao Topo" style="text-decoration: none;">&#9650;</a></p>
+
+        <h2 id="definindo-tags">O que são tags?</h2>
+        <p>As tags são elementos de marcação que permitem que o navegador entenda como interpretar e exibir o conteúdo de uma página web.
+            As tags são escritas dentro dos símbolos <small>&lt;  &gt;</small> e geralmente vêm em pares: uma tag de abertura e uma tag de fechamento,
+            por exemplo: <small>&lt;p&gt;</small> e <small>&lt;/p&gt;</small> respectivamente.
+        </p>
+        <p>Existem diversos tipos de tags, cada uma com sua função específica, como tags para cabeçalhos, parágrafos, títulos, links, imagens, listas, etc. </p>
+        <p><a href="#inicio" title="Voltar ao Topo" style="text-decoration: none;">&#9650;</a></p>
+
+        <h2 id="tags-aprendidas">As tags aprendidas neste Módulo</h2>
+        <table>
+            <tr>
+                <td><small>&lt;h1&gt;</small> até <small>&lt;/h6&gt;</small></td>
+                <td>Define um título, sendo que o número indica diferentes níveis, com <small>h1</small> sendo o mais importante e <small>h6</small> o menos</td>
+            </tr>
+            <tr>
+                <td><small>&lt;p&gt;</small></td>
+                <td>Define um parágrafo de texto</td>
+            </tr>
+            <tr>
+                <td><small>&lt;br&gt;</small></td>
+                <td>Insere quebras de linha simples em um texto</td>
+            </tr>
+            <tr>
+                <td><small>&lt;b&gt;</small></td>
+                <td>Formata o texto como negrito, mas sem definir importância para o texto</td>
+            </tr>
+            <tr>
+                <td><small>&lt;i&gt;</small></td>
+                <td>Formata o texto como itálico, mas só deve ser usada quando não houver uma tag semântica mais apropriada</td>
+            </tr>
+            <tr>
+                <td><small>&lt;u&gt;</small></td>
+                <td>Formata o texto com um sublinhado</td>
+            </tr>
+            <tr>
+                <td><small>&lt;strong&gt;</small></td>
+                <td>Define o texto como importante no documento e o texto é exibido em negrito</td>
+            </tr>
+            <tr>
+                <td><small>&lt;em&gt;</small></td>
+                <td>Define o texto como enfatizado no documento e o texto é exibido em itálico</td>
+            </tr>
+            <tr>
+                <td><small>&lt;mark&gt;</small></td>
+                <td>Define o texto como marcado ou destacado e o texto pode ser exibido com um fundo amarelo</td>
+            </tr>
+            <tr>
+                <td><small>&lt;small&gt;</small></td>
+                <td>Define o texto com tamanho menor do que o padrão do texto ao redor</td>
+            </tr>
+            <tr>
+                <td><small>&lt;blockquote&gt;</small></td>
+                <td>Define uma citação de outra fonte</td>
+            </tr>
+            <tr>
+                <td><small>&lt;code&gt;</small></td>
+                <td>Define o texto como código de computador no documento</td>
+            </tr>
+            <tr>
+                <td><small>&lt;a&gt;</small></td>
+                <td>Define um link para outras páginas web ou até mesmo para outras seções dentro da mesma página</td>
+            </tr>
+            <tr>
+                <td><small>&lt;img&gt;</small></td>
+                <td>Define uma imagem</td>
+            </tr>
+            <tr>
+                <td><small>&lt;div&gt;</small></td>
+                <td>Define uma divisão em um documento e pode ser usada para agrupar e aplicar estilos com CSS</td>
+            </tr>
+            <tr>
+                <td><small>&lt;span&gt;</small></td>
+                <td>Define um agrupamento embutido em uma parte de um texto ou de um documento para aplicar estilos com CSS</td>
+            </tr>
+            <tr>
+                <td><small>&lt;ul&gt;</small>, <small>&lt;ol&gt;</small>, <small>&lt;li&gt;</small></td>
+                <td>Define listas não ordenadas, ordenadas e itens de lista, respectivamente</td>
+            </tr>            
+            <tr>
+                <td><small>&lt;table&gt;</small>, <small>&lt;tr&gt;</small>, <small>&lt;td&gt;</small></td>
+                <td>Define tabelas com linhas e colunas</td>
+            </tr>
+            <tr>
+                <td><small>&lt;form&gt;</small></td>
+                <td>Cria um formulário HTML e pode conter um ou mais elementos para entrada do usuário</td>
+            </tr>
+        </table>
+        <p><a href="#inicio" title="Voltar ao Topo" style="text-decoration: none;">&#9650;</a></p>
+
+        <h2 id="referencias">Referências</h2>
+        <p>Para aprofundar seus conhecimentos em <small>HTML</small>, várias fontes são recomendadas incluindo cursos online, tutoriais, documentação oficial, entre outras.</p>
+        <p>Aqui estão as minhas sugestões:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Structuring_content" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://learn.microsoft.com/pt-br/training/paths/build-web-pages-html-css-for-beginners/" target="_blank" rel="noopener noreferrer">Microsoft Learn</a></li>
+            <li><a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+        </ul>
+        <p><a href="#inicio" title="Voltar ao Topo" style="text-decoration: none;">&#9650;</a></p>
+        <br>
+        <br>
+    </main>
+    <footer>
+    <p>
+        Encontre-me no <a href="https://github.com/ddemiciano" target="_blank">GitHub</a>!
+    </p>
+    </footer>
+</body>
+</html>
