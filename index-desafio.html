@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda o que é HTML e como ele estrutura as páginas da web."><!--descrição para buscadores web-->
+    <title>Introdução ao HTML</title>
+</head>
+<body>
+    <h1>Introdução ao HTML</h1>
+    <hr />
+
+        <p>O <abbr title="HyperText Markup Language">HTML</abbr> é a <strong>linguagem de marcação</strong> utilizada para estruturar páginas na web.</p> <!--tag <abbr> sendo utilizada para indicar ao navegador e leitores de tela que o conteúdo é uma forma abreviada de uma palavra ou expressão completa.-->
+        <p>Com ele, podemos definir títulos, parágrafos, links, imagens, listas, tabelas e muito mais.</p>
+        <p>O HTML funciona como a <em>"espinha dorsal"</em> de qualquer site, organizando as informações para que os navegadores possam interpretá-las e exibi-las corretamente aos usuários.</p> <!--tag <em> sendo utilizada para reforçar o tom metáfórico de "espinha dorsal".-->
+    
+
+    <h2 id="inicio">Tópicos</h2>
+        <ul>
+            <li><a href="#historia">Um pouco de história: Como surgiu o HTML?</a></li>
+            <li><a href="#tags">O que são TAGS?</a></li>
+            <li><a href="#form">Tag <code>&lt;form&gt;</code><code>&lt;/form&gt;</code></a></li><!--uso das entidades "&lt;" e "&gt;" para que o navegador não interprete os símbolos < e >.// tag <code> sendo utilizada para indicar ao leitor de tela que esse conteúdo é um código de programação.-->
+            <li><a href="#input">Tag <code>&lt;input&gt;</code> e seus tipos</a></li>
+            <li><a href="#formatacao">Formatação de Texto</a></li>
+            <li><a href="#listas">Listas Ordenadas e Não Ordenadas</a></li>
+            <li><a href="#div-span">Tags Coringa: <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code></a></li>
+            <li><a href="#fieldset">Tags <code>&lt;fieldset&gt;</code> e <code>&lt;legend&gt;</code></a></li>
+            <li><a href="#iframes">Tag <code>&lt;iframe&gt;</code></a></li>
+            <li><a href="#midia">Tags de Mídia no HTML</a></li>
+            <li><a href="#tabelas">Tabelas em HTML</a></li>
+            <li><a href="#semantica">Semântica no HTML</a></li>
+        </ul>
+
+    <hr />
+
+    <h2 id="historia">Um pouco de história: Como surgiu o HTML?</h2>
+        <p>O <abbr title="HyperText Markup Language"><strong>HTML</strong></abbr> foi criado nos anos 90 por <cite>Tim Berners-Lee</cite>, um cientista britânico que trabalhava no <abbr title="Organização Europeia para Pesquisa Nuclear">CERN</abbr>.</p> <!-- a tag <cite> sendo usada para nomes de autores/criadores.-->
+        <p>A ideia surgiu da necessidade de <strong><em>compartilhar documentos científicos</strong></em> entre pesquisadores, de forma simples e acessível pela internet.</p>
+        <p>Em <time datetime="1991">1991</time>, Tim publicou a primeira versão do HTML, contendo apenas algumas tags básicas para formatar texto e criar links entre documentos - o chamado <strong>"hipertexto"</strong>.</p> <!--uso do atributo <time datetime="#"></time> para representar corretamente a data, ajudando os mecanismos de busca e leitura.-->
+        <p>Essa linguagem se tornou a <strong>base da <abbr title="World Wide Web">WWW</abbr></strong>, permitindo a criação e visualização de páginas na internet por navegadores.</p>
+
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="tags">O que são <em>Tags</em>?</h2>
+        <p>No HTML, <strong>tags</strong> são os <em>blocos de construção</em> que usamos para <strong>marcar e estruturar o conteúdo</strong> de uma página web.</p>
+        <p>São instruções que dizem ao navegador <strong>como exibir</strong> o conteúdo. Elas são sempre colocadas entre sinais de maior e menor: <code>< ></code>.</p>
+    
+        <h3>Exemplos de tags:</h3>
+            <ul>
+                <li><code>&lt;h1&gt; &lt;/h1&gt;</code> - Usada para definir o <strong>título principal</strong></li>
+                <li><code>&lt;head&gt; &lt;/head&gt;</code> - <strong>Cabeçalho do documento</strong> (contém título, codificação de caracteres, estilos (CSS), scripts (JavaScript), links externos e configurações para mecanismos de busca)</li>
+                <li><code>&lt;body&gt; &lt;/body&gt;</code> - <strong>Corpo do documento</strong> (tudo o que será exibido na tela do navegador: textos, imagens, links, botões, tabelas, vídeos, formulários, etc)</li>
+                <li><code>&lt;strong&gt; &lt;/strong&gt;</code> - Indica que aquele conteúdo é <strong>importante, relevante</strong> ou merece <strong>destaque especial</strong> (ênfase semântica forte)</li>
+                <li><code>&lt;blockquote&gt; &lt;/blockquote&gt;</code> - Usada para marcar uma <strong>citação em bloco</strong>, geralmente com destaque visual e semântico</li>
+            </ul>
+        <p>Existem também tags que <strong>não precisam de fechamento</strong>, por exemplo:</p>
+            <ul>
+                <li><code>&lt;img&gt;</code> – Usada para inserir <strong>imagens</strong></li>
+                <li><code>&lt;br /&gt;</code> – Usada para inserir <strong>quebras de linhas simples</strong>, como em poesias, endereços ou quebras manuais dentro de frases</li>
+                <li><code>&lt;hr /&gt;</code> – Por padrão, o navegador exibe uma <strong>linha cinza horizontal</strong></li>
+            </ul>
+        <p>Essas e outras tags são utilizadas para estruturar a página, exibir textos, inserir mídias (imagem, video e áudio) e criar citações.</p>
+    
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="form">Tag <code>&lt;form&gt;&lt;/form&gt;</code></h2>
+        <p>A tag <code>&lt;form&gt;&lt;/form&gt;</code> é usada para <strong>criar formulários</strong> - ou seja, áreas da página onde o usuário pode <strong>inserir dados</strong> que serão enviados para um servidor ou processados de alguma forma.</p>
+        <p>Ela agrupa campos de entrada, como:</p>
+            <ul>
+                <li><code>&lt;input&gt;</code> – caixas de texto, botões, checkboxes etc.</li>
+                <li><code>&lt;textarea&gt;</code> – área de texto</li>
+                <li><code>&lt;select&gt;</code> – menu suspenso</li>
+                <li><code>&lt;button&gt;</code> – botão de envio</li>
+            </ul>
+        <p><strong>Principais atributos:</strong></p>
+            <ul>
+                <li><code>action="#"</code> – define <strong>para onde os dados serão enviados</strong> (URL ou script no servidor)</li>
+                <li><code>method="#"</code> – define <strong>como</strong> os dados serão enviados:</li>
+                    <ul>
+                        <li><code>GET</code> – os dados aparecem na URL (menos seguro)</li>
+                        <li><code>POST</code> – mais seguro, usado para dados confidenciais</li>
+                    </ul>
+            </ul>
+        <h3>Exemplo funcional:</h3>
+            <pre><code><!--tag <pre> sendo usada para exibir um bloco inteiro de código.-->
+                &lt;form action="#" method="post"&gt;
+                    &lt;input type="text" name="usuario" placeholder="usuário"&gt;
+                    &lt;input type="password" name="senha" placeholder="senha"&gt;
+                    &lt;button type="submit"&gt;Entrar&lt;/button&gt;
+                &lt;/form&gt;
+            </code></pre>
+
+        <h4>Resultado:</h4>
+            <div> <!--tag <div> sendo utilizada para facilitar a visualização do resultado do exemplo dado.-->
+                <form action="#" method="post">
+                    <fieldset><!--<fieldset> sendo usada para agrupar os campos e criar uma borda padrão do navegador.-->
+                        <legend><strong>Login do Usuário</strong></legend><!--<legend> usada para criar um título para o grupo de campos.-->
+
+                        <label for="usuario">Usuário:</label><br><!--<label> usada para texto "dica" no campo a ser preenchido, ajudando na acessibilidade.-->
+                        <input type="text" id="usuario" name="usuario" placeholder="usuário"><br><br>
+
+                        <label for="senha">Senha:</label><br>
+                        <input type="password" id="senha" name="senha" placeholder="senha"><br><br>
+
+                        <button type="submit">Entrar</button>
+                    </fieldset>
+                </form>
+            </div>
+
+        <aside style="background-color: #d4edda; border-left: 5px solid #28a745; padding: 12px; margin: 16px 0;"> <!--tag <aside> sendo utilizada para destacar uma dica.-->
+            <p><strong>💡 DICA:</strong> Sempre use <code>method="post"</code> para enviar <strong>dados confidenciais</strong> (como senhas), pois com <code>GET</code> os dados aparecem na URL.</p>
+        </aside>
+    
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="input">Tag <code>&lt;input&gt;</code> e seus tipos</h2>
+        <p> A tag <code>&lt;input&gt;</code> é usada para <strong>criar campos interativos</strong> dentro de um formulário - ou seja, áreas onde o usuário pode <strong>inserir dados</strong> como texto, número, senha, e-mail, selecionar arquivos, marcar checkboxes, etc.</p>
+    
+        <p><strong>Principais atributos da tag</strong> <code>&lt;input&gt;:</code></p>
+            <ul>
+                <li><code>type</code> - tipo de entrada (text, email, password, checkbox etc.)</li>
+                <li><code>name</code> - nome do campo (usado ao enviar para o servidor)</li>
+                <li><code>placeholder</code> - dica dentro do campo</li>
+                <li><code>value</code> - valor padrão do campo.</li>
+                <li><code>required</code> - torna o preenchimento obrigatório</li>
+                <li><code>disabled</code> - desativa o campo</li>
+            </ul>
+
+        <p><strong>Exemplos com diferentes tipos:</strong></p>
+            <pre><code>
+                &lt;input type="text" placeholder="Seu nome"&gt;<br>
+                &lt;input type="email" placeholder="Seu e-mail"&gt;<br>
+                &lt;input type="password" placeholder="Sua senha"&gt;<br>
+                &lt;input type="checkbox"&gt; Aceito os termos <br>
+                &lt;input type="radio" name="genero" value="feminino"&gt;Feminino<br>
+                &lt;input type="radio" name="genero" value="masculino"&gt;Masculino<br>
+                &lt;input type="file"&gt; <br>
+                &lt;input type="submit" value="Enviar"&gt;<br>
+            </code></pre>
+    
+        <h4>Resultado:</h4>
+            <fieldset>
+                <legend><strong>Cadastro:</strong></legend>
+
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" placeholder="Seu nome"><br><br>
+
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" placeholder="Seu e-mail"><br><br>
+
+                    <label for="senha">Senha:</label><br>
+                    <input type="password" id="senha" placeholder="Sua senha"><br><br>
+
+                    <label><input type="checkbox"> Aceito os termos</label><br><br>
+
+                    Gênero:<br>
+                    <label><input type="radio" name="genero" value="feminino"> Feminino</label><br>
+                    <label><input type="radio" name="genero" value="masculino"> Masculino</label><br><br>
+
+                    <label for="arquivo">Enviar arquivo:</label><br>
+                    <input type="file" id="arquivo"><br><br>
+
+                    <input type="submit" value="Enviar">
+            </fieldset>
+
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="formatacao">Formatação de Texto</h2>
+        <p>A formatação de texto em HTML permite <strong>destacar, organizar e dar significado</strong> ao conteúdo das páginas web. Existem tags específicas para <strong>negrito, itálico, sublinhado, citações</strong>, entre outras.</p>
+        <p>Algumas tags são apenas visuais, como <code>&lt;b&gt;</code> (negrito) e <code>&lt;i&gt;</code> (itálico), enquanto outras têm <strong>valor semântico</strong>, como <code>&lt;strong&gt;</code> (ênfase importante) que ajudam na <strong>acessibilidade e interpretação por leitores de tela</strong>.</p>
+        <p>Também é possível marcar trechos com <code>&lt;mark&gt;</code>, reduzir com <code>&lt;small&gt;</code>, ou indicar fórmulas com <code>&lt;sub&gt;</code> e <code>&lt;sup&gt;</code>.</p>
+        <p>Essas ferramentas tornam o conteúdo <strong>mais claro, organizado e acessível</strong>, tanto para usuários quanto para buscadores.</p>
+    
+        <h3>Exemplos de tags de formatação:</h3>
+            <ul>
+                <li><code>&lt;b&gt;</code> - deixa o texto em <strong>negrito visual</strong>, mas sem significado semântico.</li>
+                <li><code>&lt;strong&gt;</code> - negrito com <strong>ênfase importante</strong> (semântico e acessível).</li>
+                <li><code>&lt;i&gt;</code> - texto em <em>itálico visual</em>, sem significado semântico.</li>
+                <li><code>&lt;u&gt;</code> - sublinha o texto.</li>
+                <li><code>&lt;small&gt;</code> - diminui o tamanho do texto (usado em <small>notas de rodapé</small> ou observações).</li>
+                <li><code>&lt;mark&gt;</code> - destaca como se fosse um <mark>marca-texto</mark>.</li>
+                <li><code>&lt;sub&gt;</code> - texto <sub>subscrito</sub> (usado em fórmulas).</li>
+                <li><code>&lt;sup&gt;</code> - texto <sup>sobrescrito</sup> (usado em potências ou notas).</li>
+                <li><code>&lt;br&gt;</code> - quebra de linha (não é de formatação, mas afeta visualmente o texto).</li>
+                <li><code>&lt;hr&gt;</code> - insere uma <strong>linha horizontal</strong> que separa seções.</li>
+                <li><code>&lt;blockquote&gt;</code> - citação em bloco, com recuo e destaque</li>
+                <li><code>&lt;q&gt;</code> - citação curta dentro de um parágrafo, com aspas automáticas.</li>
+            </ul>
+        <h3>Exemplo de <code>&lt;blockquote&gt;:</code></h3>
+            <blockquote>
+                🧠 A simplicidade é o último grau de sofisticação.
+            </blockquote>
+                <p>— Leonardo da Vinci</p>
+
+        <h3>Exemplo de <code>&lt;q&gt;</code>:</h3>
+            <p>Leonardo da Vinci disse: <q>A simplicidade é o último grau de sofisticação.</q></p>
+    
+        <aside style="background-color: #d4edda; border-left: 5px solid #28a745; padding: 12px; margin: 16px 0;"> <!--tag <aside> sendo utilizada para destacar uma dica.-->
+            <p><strong>💡 DICA:</strong> Para indicar a fonte de uma citação de <code>&lt;blockquote&gt;</code>, você pode utilizar o atributo <code>&lt;cite&gt;</code>.</p>
+        </aside>
+    
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="listas"><em>Listas Ordenadas</em> e <em>Não ordenadas</em></h2>
+        <p>As <strong>listas ordenadas</strong> <code>&lt;ol&gt;</code> e <strong>não ordenadas</strong> <code>&lt;ul&gt;</code> servem para <strong>organizar e estruturar informações em sequência ou em grupo</strong>, facilitando a <strong>leitura, compreensão e navegação</strong> do conteúdo na página web.</p> 
+        
+        <h3><code>&lt;ol&gt; &lt;/ol&gt;</code> - Lista Ordenada</h3>
+            <ul>
+                <li>Usa <strong>números</strong> ou letras (1,2,3... ou A,B,C...)</li>
+                <li>Ideal para <strong>passos, rankings ou sequências</strong></li>
+                <li>Usa <code>&lt;li&gt; &lt;/li&gt;</code> para os itens</li>
+            </ul>
+
+        
+        <h3><code>&lt;ul&gt; &lt;/ul&gt;</code> - Lista Ordenada</h3>
+            <ul>
+                <li>Usa <strong>marcadores (bolinhas)</strong></li>
+                <li>Ideal para <strong>listas sem ordem específica</strong>, como ingredientes, tópicos ou links de navegação</li>
+                <li>Também usa <code>&lt;li&gt; &lt;/li&gt;</code> para os itens</li>
+            </ul>
+        
+    <h3>Por que usar listas corretamente?</h3>
+        <ul>
+            <li><strong>Organização visual:</strong> melhora a aparência e estrutura do conteúdo.</li>
+            <li><strong>Semântica:</strong>ajuda o navegador e leitores de tela a entenderem o significado da informação.</li>
+            <li><strong>Acessibilidade:</strong> facilita a navegação para usuários com deficiência.</li>
+            <li><strong>SEO:</strong> listas bem estruturadas ajudam os buscadores a entenderem melhor seu conteúdo.</li>
+        </ul>
+    
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="div-span">Tags Coringas: <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code></h2>
+        <p>As tags <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code> são elementos de agrupamento amplamente utilizados em HTML para <strong>organizar e estruturar o conteúdo</strong>. Apesar de semelhantes, elas possuem funções distintas:</p>
+    
+        <h3><code>&lt;div&gt;</code> - Divisão em Bloco</h3>
+            <ul>
+                <li>É um <strong>elemento de bloco</strong>, ou seja, ocupa toda a largura disponível na linha.</li>
+                <li>Ideal para <strong>agrupar grandes seções</strong> da página, como áreas, colunas, caixas de conteúdo e seções inteiras.</li>
+                <li>Não possui aparência visual por padrão; seu estilo é definido com CSS.</li>
+            </ul>
+    
+        <h3><code>&lt;span&gt;</code> – Agrupamento em Linha</h3>
+            <ul>
+                <li>É um <strong>elemento em linha</strong>, ou seja, não quebra a linha onde está inserido.</li>
+                <li>Usado para <strong>aplicar estilo a partes específicas do texto</strong> dentro de um parágrafo, frase ou palavra.</li>
+                <li>Também não possui estilo visual por padrão; depende de CSS para exibir mudanças.</li>
+            </ul>
+    
+        <aside style="background-color: #d4edda; border-left: 5px solid #28a745; padding: 12px; margin: 16px 0;">
+            <p><strong>💡 DICA:</strong>
+                <ul>
+                    <li>Use <code>&lt;div&gt;</code> para estruturar a <strong>arquitetura da página</strong> (colunas, menus, seções, caixas, etc.).</li>
+                    <li>Use <code>&lt;span&gt;</code> para <strong>destacar trechos específicos de texto</strong>, como uma palavra ou expressão dentro de um parágrafo.</li>
+                </ul>
+        </aside>
+
+
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="fieldset">Tag <code>&lt;fieldset&gt;</code> e <code>&lt;legend&gt;</code></h2>
+        <p>A tag <code>&lt;fieldset&gt;</code> é utilizada para <strong>agrupar campos relacionados</strong> dentro de um formulário, criando uma caixa com borda ao redor dos elementos. Isso melhora a <strong>organização visual</strong> e a <strong>acessibilidade</strong> do conteúdo, facilitando a leitura e a navegação, especialmente por leitores de tela.</p>
+        <p>Ela costuma ser usada em conjunto com a tag <code>&lt;legend&gt;</code>, que fornece um <strong>título descritivo</strong> para o grupo de campos.</p>
+
+        <h3>Vantagens do uso de <code>&lt;fieldset&gt;</code>:</h3>
+            <ul>
+                <li>Melhora a <strong>organização visual</strong> do formulário.</li>
+                <li>Aumenta a <strong>acessibilidade</strong> para tecnologias assistivas.</li>
+                <li>Ajuda o usuário a entender melhor a separação entre diferentes grupos de informações.</li>
+            </ul>
+
+        <h4>Exemplo de uso:</h4>
+            <pre><code>
+                &lt;form&gt;
+                    &lt;fieldset&gt;
+                        &lt;legend&gt;Informações Pessoais&lt;/legend&gt;
+    
+                            &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+                            &lt;input type="text" id="nome" name="nome"&gt;
+    
+                            &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+                            &lt;input type="email" id="email" name="email"&gt;
+                    &lt;/fieldset&gt;
+                &lt;/form&gt;
+            </code></pre>
+    
+        <h4>Resultado:</h4>
+            <form>
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" id="nome" name="nome"><br><br>
+
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email"><br><br>
+                </fieldset>
+            </form>
+  
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="iframes">Tag <code>&lt;iframe&gt;</code></h2>
+        <p>A tag <code>&lt;iframe&gt;</code> é utilizada para <strong>incorporar conteúdos externos</strong> dentro de uma página web.</p>
+    
+        <p>Alguns exemplos comuns de uso incluem:</p>
+            <ul>
+                <li>Vídeos do YouTube;</li>
+                <li>Mapas do Google Maps;</li>
+                <li>Documentos PDF;</li>
+                <li>Outras páginas HTML hospedadas no mesmo site.</li>
+            </ul>
+
+        <h3>Atributos principais da tag <code>&lt;iframe&gt;</code>:</h3>
+            <ul>
+                <li><code>src</code> – define a <strong>URL do conteúdo</strong> que será carregado dentro do iframe.</li>
+                <li><code>width</code> – especifica a <strong>largura</strong> do iframe (em pixels ou porcentagem).</li>
+                <li><code>height</code> – especifica a <strong>altura</strong> do iframe.</li>
+                <li><code>title</code> – fornece uma <strong>descrição acessível</strong> para leitores de tela (importante para acessibilidade).</li>
+            </ul>
+
+        <aside style="background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 12px; margin: 16px 0;">
+            <strong>⚠️ ATENÇÃO:</strong> Nem todos os sites permitem ser exibidos em <code>&lt;iframe&gt;</code> devido a políticas de segurança, como a <em>Content Security Policy (CSP)</em>. Sempre teste antes e use essa tag com moderação para evitar problemas de desempenho e segurança.
+        </aside>
+
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="midia">Tags de Mídia no HTML</h2>
+        <p>As <strong>tags de mídia</strong> permitem incorporar <strong>conteúdos visuais e sonoros</strong> diretamente nas páginas web, como imagens, áudios e vídeos. Elas tornam o site mais <strong>interativo e multimídia</strong>, melhorando a experiência do usuário.</p>
+    
+        <h3>Principais tags de mídia:</h3>
+            <ul>
+                <li><code>&lt;img&gt;</code> – insere <strong>imagens</strong> (formatos comuns: <em>.jpg</em>, <em>.png</em>, <em>.gif</em>).</li>
+                <li><code>&lt;audio&gt;</code> – incorpora <strong>áudios</strong> (como <em>.mp3</em> ou <em>.ogg</em>), com opções de controle.</li>
+                <li><code>&lt;video&gt;</code> – insere <strong>vídeos</strong> diretamente na página (<em>.mp4</em>, <em>.webm</em>, etc.).</li>
+                <li><code>&lt;source&gt;</code> – define <strong>fontes alternativas de mídia</strong> para as tags <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code>, garantindo compatibilidade entre navegadores.</li>
+                <li><code>&lt;iframe&gt;</code> – permite <strong>incorporar conteúdos externos</strong>, como vídeos do YouTube, mapas do Google ou outras páginas da web.</li>  
+            </ul>
+        <p>Essas tags permitem <strong>exibir e controlar</strong> mídia sem depender de plugins externos. Com elas, você pode criar páginas mais modernas, informativas e acessíveis.</p>
+    
+        <aside style="background-color: #d4edda; border-left: 5px solid #28a745; padding: 12px; margin: 16px 0;"> <!--tag <aside> sendo utilizada para destacar uma dica.-->
+            <p><strong>💡 DICA:</strong> Sempre utilize os atributos <code>controls</code>, <code>title</code> e <code>alt</code> para melhorar a <strong>acessibilidade e usabilidade</strong> dos elementos de mídia.</p>
+        </aside>
+    
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="tabelas">Tabelas em HTML</h2>
+        <p>As <strong>tabelas</strong> são usadas para <strong>exibir dados organizados em linhas e colunas</strong>, facilitando a apresentação de informações como horários, listas de preços, comparativos e muito mais.</p>
+
+            <h3>Elementos fundamentais:</h3>
+                <ul>
+                    <li><code>&lt;table&gt;</code> – define o início da tabela.</li>
+                    <li><code>&lt;tr&gt;</code> – representa uma linha dentro da tabela.</li>
+                    <li><code>&lt;th&gt;</code> – define uma célula de cabeçalho (exibida em negrito e centralizada por padrão).</li>
+                    <li><code>&lt;td&gt;</code> – representa uma célula de dados comum.</li>
+                    <li><code>&lt;caption&gt;</code> – adiciona um título descritivo à tabela (opcional, mas recomendado).</li>
+                </ul>
+
+        <h4>Exemplo de tabela simples:</h4>
+            <pre><code>
+                &lt;table border="1"&gt;
+                    &lt;caption&gt;Notas dos Alunos&lt;/caption&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Nome&lt;/th&gt;
+                            &lt;th&gt;Nota&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;João&lt;/td&gt;
+                            &lt;td&gt;8,5&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Ana&lt;/td&gt;
+                            &lt;td&gt;9,0&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+            </code></pre>
+
+        <h4>Resultado:</h4>
+            <fieldset>
+                <table border="1" style="border-collapse: collapse; width: 100%; text-align: center;">
+                    <caption><strong>Notas dos Alunos</strong></caption>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nota</th>
+                        </tr>
+                        <tr>
+                            <td>João</td>
+                            <td>8,5</td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>9,0</td>
+                        </tr>
+                </table>
+            </fieldset>
+
+        <aside style="background-color: #d4edda; border-left: 5px solid #28a745; padding: 12px; margin: 16px 0;">
+            <p><strong>💡 DICA:</strong>
+                <ul>
+                    <li>Use <code>&lt;th&gt;</code> sempre que estiver definindo cabeçalhos de linhas ou colunas.</li>
+                    <li>Use CSS para melhorar a aparência e responsividade da tabela.</li>
+                    <li>Para estruturas mais complexas, utilize também: <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, além dos atributos <code>colspan</code> e <code>rowspan</code> para mesclar células.</li>
+                </ul>
+        </aside>
+
+    <p><a href="#inicio">Voltar ao início</a></p>
+    <hr />
+
+    <h2 id="semantica">Semântica no HTML</h2>
+        <p>No HTML, <strong>semântica</strong> significa utilizar <strong>elementos com significado claro</strong>, que descrevem o propósito do conteúdo que envolvem. Isso torna o código mais <strong>compreensível</strong> para navegadores, desenvolvedores, leitores de tela e mecanismos de busca.</p>
+
+        <p>Em vez de usar apenas tags genéricas como <code>&lt;div&gt;</code> ou <code>&lt;span&gt;</code>, é recomendável utilizar <strong>elementos semânticos</strong>, como:</p>
+            <ul>
+                <li><code>&lt;header&gt;</code> – representa o cabeçalho da página ou de uma seção.</li>
+                <li><code>&lt;nav&gt;</code> – define a área de navegação (como menus e links).</li>
+                <li><code>&lt;main&gt;</code> – delimita o conteúdo principal da página.</li>
+                <li><code>&lt;article&gt;</code> – representa um conteúdo independente, como uma postagem de blog ou notícia.</li>
+                <li><code>&lt;section&gt;</code> – agrupa conteúdos relacionados dentro da página.</li>
+                <li><code>&lt;aside&gt;</code> – define conteúdo complementar ou lateral.</li>
+                <li><code>&lt;footer&gt;</code> – representa o rodapé da página ou de uma seção.</li>
+            </ul>
+
+        <h3>Por que usar HTML semântico?</h3>
+            <ul>
+                <li><strong>Melhora a acessibilidade:</strong> leitores de tela conseguem interpretar melhor o conteúdo.</li>
+                <li><strong>Facilita a manutenção:</strong> o código fica mais organizado e compreensível para outros desenvolvedores.</li>
+                <li><strong>Otimiza o SEO:</strong> os mecanismos de busca entendem melhor a estrutura e relevância do conteúdo.</li>
+                <li><strong>Promove boas práticas:</strong> deixa o HTML mais claro, estruturado e sustentável.</li>
+            </ul>
+
+    <hr />
+
+    <aside style="background-color: #f3e8ff; border-left: 5px solid #a855f7; padding: 1rem; margin: 1rem 0;">
+        <h2>🌟 EXPLORE MAIS:</h2>
+            <ul>
+                <li><a href="https://web.dio.me/" target="_blank">Visite DIO.me</a></li>
+                <li><a href="https://www.w3.org/" target="_blank">Visite W3C</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Visite MDN</a></li>
+            </ul>
+    </aside>
+
+    <p><a href="#inicio">Voltar ao topo</a></p>
+
+    <footer style="background-color: #ffffff; padding: 20px; text-align: center; font-size: 0.9em; color: #333; margin-top: 10px; border-top: 1px solid #ccc;">
+        <p><strong>📚 Página criada com fins educacionais.</strong></p>
+        <p>Conteúdo desenvolvido para introduzir os conceitos fundamentais do <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+        <p style="margin-top: 10px;">Feito com ❤️ por <strong>Giovanna Fernandes</strong> • © 2025</p>
+    </footer>
+
+</body>
+</html>
