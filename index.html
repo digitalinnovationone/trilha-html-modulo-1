@@ -6,57 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página - Módulo I - Primeiros Passos com HTML</title>
 </head>
-<body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
+  <body>
+    <h1>Módulo I Primeiros Passos com HTML</h1>
     <hr />
 
-    <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
+    <h2 id="indice">Índice</h2>
     <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
+        <li><a href="#sessao1">Tags</a></li>
+        <ol>
+        <li><a href="#sessao2">Atributo das Tags</a></li>
+        <li><a href="#sessao3">Textos</a></li>
+        <li><a href="#sessao4">Listas</a></li>
+        </ol>
+         <li><a href="#links">Links de referência</a></li>
+
     </ul>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h1 id="sessao1"><strong><i>Tags</i></strong></h1>
+     <p>Tags são elementos de marcação que definem <strong> o conteúdo de uma página da WEB.</strong> Elas são escritas entre colchetes angulares < >, geralmente vem em pares: uma de abertura, e outra de fechamento. As tags vão indicar ao navegador como exibir o conteúdo: <i>títulos, parágrafos, imagens, links.</i> Elas são a base da linguagem HTML. Algumas tags <u>não necessitam</u> de barra de fechamento, como a <i>input e img.</i> E algumas tags são auto-fecháveis, como a <i>< br > (quebra de linha).</i> 
+        <br><blockquote><u><i>Lembre-se:</u></i>
+        <br> É fundamental manter a estrutura do HTML para o melhor funcionamento e semântica para a acessibilidade e manutenção do código.
+        <br> É importante fechar todas as tags, menos as tags auto-fecháveis, para evitar erros de exibição.    
+        </blockquote>
+    </p>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+     <h2 id="sessao2">1. Atibutos da Tag</h2>
+     <p>Atributos são propriedades que podem ser adicionadas às tags, com a finalidade de modificar o seu comportamento ou aparência.
+        <br>Elas são especificadas nas tags de abertura, e geralmente consistem em um nome + um valor, por exemplo: <i><strong> < img src="imagem.png" alt="Descrição da imagem"> </i></strong>. Nesse exemplo, os <strong>atributos utilizados</strong> na tag < img > foram <u>src</u>, <strong>que define a imagem</strong> e <u>alt</u>, <strong>que define a descrição da imagem colocada.</strong>
+        <br><blockquote><i>Algumas exemplos de propriedades são:</i>
+        <br><ul>
+        <br><li><a><strong> id:</strong> identificador do elemento</a></li>
+        <br><li><a><strong>style (CSS):</strong> colocar o comando direto no elemento </a></li>
+        <br><li><a><strong>class (CSS):</strong> padronizar o elemento</a></li>
+        <br><li><a><strong>input type (mais usados):</strong> especifica qual tipo de dado o programador deseja inserir
+            <br><i> Exemplo: < input type="text" name="nome" placeholder="Seu nome" ></i>
+        </a></li>
+        <br><li><a><strong>href:</strong> usado para colocar links</a></li>
+        </ul>
+    </blockquote>
+    </p>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="sessao3">2. Textos <small><i>(tipografia)</i></small></h2>
+    <p>As tags de texto são usadas para formatar e estruturar o conteúdo em páginas da WEB, ele define como o conteúdo vai se portar. São elementos importantes e fundamentais para a formatação e apresentação visual do conteúdo. Elas se dividem em tags de formatação e tags que definem elementos semânticos.
+    <br><blockquote><i>São alguns exemplos de tag de texto:</i>
+    <br><ul>
+        <br><li><a><strong>h:</strong> header (cabeçalho, título) varia de h1 a h6, sendo h1 o maior, e h6 o menor tamanho.</a></li>
+        <br><li><a><strong>p:</strong> parágrafos</a></li>
+        <br><li><a><strong>strong:</strong> negrito</a></li>
+        <br><li><a><strong>i:</strong> itálico</a></li>
+        <br><li><a><strong>u:</strong> underline</a></li>
+        <br><li><a><strong>mark:</strong> marca texto</a></li>
+        <br><li><a><strong>blockquote:</strong> citação</a></li>
+    </blockquote>
+    </p>
 
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
+    <h2 id="sessao4">3. Listas</h2>
+    <p>No HTML, as tags de listas são usadas para criar listas <u>ordenadas</u> e <u>não ordenadas</u>. As principais listas são < ul >: listas não ordenadas (possuem marcadores), e < ol >: listas ordenadas, acompanham numeros ordinais, numeradas. e a tag < li > usada para cada item da lista.
+    <br><blockquote><h4><strong>LISTA NÃO ORDENADA</h4></strong></blockquote>
     <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
+        <li>A tag < ul > representa uma <i>Lista não ordenada</i></li>
+        <li>Cada item da lista acompanha a tag < i > dentro da tag principal <small>(ul)</small></i></li>
+        <li>Normalmente os itens são exibidos com marcadores como pontos, circulos.</li>
+    </ul>
+    <i>Código de lista não ordenada:
+        <br>< ul >
+            <br>&nbsp &nbsp &nbsp< li >Item 1 < / li >
+            <br>&nbsp &nbsp &nbsp< li >Item 2 < / li >
+            <br>&nbsp &nbsp &nbsp< li >Item 3 < / li >
+        <br>< / ul>
+    </i>
+    </blockquote>
+      
+
+    <blockquote><h4><strong>LISTA ORDENADA</h4></strong>
+         <ul>
+            <li>A tag < ol > representa uma <i>Lista ordenada</i> </li>
+            <li>Cada item da lista acompanha a tag < i > dentro da tag principal <small>(ol)</i> </li>
+            <li>Cada item da lista é representada por uma sequência numérica </li>
+            <li>É possivel alterar o tipo de ordenação (números romanos, letras, etc) com a tag de atributo <i>type</i> </li>
+        </ul>
+        <i>Código de lista ordenada:
+        <br>< ol >
+            <br>&nbsp &nbsp &nbsp< li >Item 1 < / li >
+            <br>&nbsp &nbsp &nbsp< li >Item 2 < / li >
+            <br>&nbsp &nbsp &nbsp< li >Item 3 < / li >
+        <br>< / ol>
+            <br> Ou:
+          <br>< ol type="a" >
+            <br>&nbsp &nbsp &nbsp< li >Item a < / li >
+            <br>&nbsp &nbsp &nbsp< li >Item b < / li >
+            <br>&nbsp &nbsp &nbsp< li >Item c < / li >
+        <br>< / ol>
+    </i>
+    </blockquote>
+    </i>
+    </blockquote>
+   </p>
+
+   <p>
+   <h1 id="links"><strong><i>Links</i></strong></h1>
+    <ul>
+        <li>Estilos HTML. W3schools. Disponivel em <a href="https://www.w3schools.com/html/html_styles.asp" target="blank">W3schools</a> Acessado no dia 04/07/2025. </li>
+        <li>Trabalhando com a tag âncora no HTML. TreinaWeb, 2022. Disponível em <a href="https://www.treinaweb.com.br/blog/trabalhando-com-a-tag-ancora-no-html" target="blank">TreinaWeb</a> Acessado no dia 04/07/2025.</li>
     </ul>
 
-</body>
-</html>
+</p>
+  </body>
