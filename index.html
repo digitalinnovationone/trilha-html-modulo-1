@@ -1,62 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafio Dio.me - Módulo I - Primeiros Passos com HTML</title>
+  <style>
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      padding: 0 10px;
+      font-size: x-large;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: blue;
+    }
+
+    p {
+      text-indent: 30px;
+    }
+
+    table {
+      border-collapse: collapse;
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    td, th {
+      border: 1px solid gray;
+      padding: 8px;
+    }
+
+    thead {
+      background-color: gray;
+    }
+
+    img {
+      border: 1px solid blue;
+    }
+
+    mark {
+      background-color: yellow;
+    }
+
+    .container-small {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-top: 1px solid #ccc;
+    }
+  </style>
 </head>
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#mudancas">Mudanças</a></li>
+        <li><a href="#aplicacoes">Aplicações</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
+  <hr />
+
+  <h2 id="historia">Breve história do HTML</h2>
+  <p>
+    O <strong>HTML (Hiper Text Markup Language)</strong>, como o próprio nome já diz, ao contrário do que pensam, não é uma linguagem de programação — é uma linguagem de marcação de hipertexto. Portanto, entende-se que é uma linguagem estrutural.
+    Seu início se deu na década de 1990, quando o então físico britânico <a href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a><sup>1</sup> criou o HTML original (e outros protocolos associados como o HTTP), numa estação NeXTcube, usando o ambiente de desenvolvimento NeXTSTEP.
+  </p>
+
+  <h2 id="mudancas">Mudanças no HTML</h2>
+  <p>Desde a sua criação, o <strong><mark>HTML</mark></strong> passou por várias mudanças. Hoje, depois de mais de 30 anos da sua criação, estamos na versão 5.2.</p>
+  <p>Apresentamos abaixo uma tabela que mostra uma linha do tempo da linguagem:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Versão</th>
+        <th>Data de Lançamento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>HTML</td><td>1991</td></tr>
+      <tr><td>HTML 2.0</td><td>1995</td></tr>
+      <tr><td>HTML 3.2</td><td>1997</td></tr>
+      <tr><td>XHTML</td><td>2000</td></tr>
+      <tr><td>HTML5</td><td>2014</td></tr>
+      <tr><td>HTML 5.1</td><td>2016</td></tr>
+      <tr><td>HTML 5.2</td><td>2017</td></tr>
+    </tbody>
+  </table>
+
+
+  <a href="#">Voltar ao topo</a>
+
+  <h2 id="aplicacoes">Aplicações do HTML</h2>
+  <p>
+    O <abbr title="HIPER TEXT MARKUP LANGUAGE">HTML</abbr> é amplamente utilizado, tanto por sua facilidade de uso diante de outras linguagens de marcação, quanto porque se tornou um padrão ISO.
+  </p>
+  <p>Esse padrão tornou o HTML uma linguagem padronizada em todo o mundo. Estima-se que 97% dos sites que usam a internet utilizam o HTML, e 100% dos sites que seguem o padrão W3C (WWW) usam essa linguagem.</p>
+
+
+  <a href="#">Voltar ao topo</a>
+
+  <footer>
+    <h2 id="referencias">Links de Referências</h2>
     <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
+      <li><a href="http://dio.me">http://dio.me</a></li>
+      <li><a href="http://w3c.org">http://w3c.org</a></li>
+      <li><a href="https://pt.wikipedia.org/wiki/HTML">https://pt.wikipedia.org/wiki/HTML</a><sup>1</sup></li>
     </ul>
+   
+    <a href="#">Voltar ao topo</a>
+  </footer>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+  <blockquote cite="https://www.pensador.com/autor/orlando_cordeiro/">
+    <i>“Faça como um programador. Quando tudo está errado e confuso, apague tudo e recomece do zero.”</i>
+  </blockquote>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
-    <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
-    </ul>
-
+  <div class="container-small">
+    <small>Nailson Lira 2025 - Todos os direitos reservados</small>
+  </div>
 </body>
 </html>
