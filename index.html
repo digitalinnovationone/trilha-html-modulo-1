@@ -1,62 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página - Módulo I - Primeiros Passos com HTML</title>
 </head>
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
+
+    <h1 id="topo">Módulo 1 - Primeiros Passos com HTML</h1>
     <hr />
 
     <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
+    <p><strong><u>INSTRUÇÕES:</u></strong> Abaixo estão os tópicos que mais entendi durante as aulas:</p>
     <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
+        <li><a href="#historia">História dos computadores</a></li>
+        <li><a href="#clients">O que são <i>Clients</i>?</a></li>
+        <li><a href="#servers">O que são <i>Servers</i>?</a></li>
+        <li><a href="#estrutura">Como é uma estrutura básica de um HTML?</a></li>
+        <li><a href="#listas">Diferença entre listas ordenadas e não ordenadas</a></li>
+        <li><a href="#referencias">Links de referências</a></li>
     </ul>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="historia">História dos computadores</h2>
+    <p>Os <strong>computadores</strong> evoluíram muito desde sua criação. <u>Antes eram enormes</u> e ocupavam salas inteiras. Hoje, são <mark>compactos</mark> e <i>acessíveis</i>.</p>
+    <p>De acordo com <a href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_inform%C3%A1tica" target="_blank">esta fonte</a>, a história da informática começa muito antes do que muitos imaginam.</p>
+    <blockquote>"Os computadores modernos são resultado de décadas de avanços tecnológicos." – Wikipédia</blockquote>
+    <p><a href="#topo"><small>Voltar ao índice</small></a></p>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="clients">O que são <i>Clients</i>?</h2>
+    <p>Um <i>client</i> é qualquer dispositivo que acessa recursos ou serviços oferecidos por um <strong>servidor</strong>. Por exemplo, um <u>navegador</u> acessando um site.</p>
+    <p>Mais informações em <a href="https://www.hostinger.com.br/tutoriais/o-que-e-cliente-servidor" target="_blank">Hostinger</a>.</p>
+    <p><a href="#topo"><small>Voltar ao índice</small></a></p>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="servers">O que são <i>Servers</i>?</h2>
+    <p>Um <strong>servidor</strong> (<i>server</i>) é responsável por fornecer dados e serviços aos clientes. Ele pode ser um <u>computador</u> ou sistema na nuvem.</p>
+    <p>Por exemplo, um servidor <abbr title="Hypertext Transfer Protocol">HTTP</abbr> entrega páginas web.</p>
+    <p><a href="#topo"><small>Voltar ao índice</small></a></p>
 
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="estrutura">Como é uma estrutura básica de um HTML?</h2>
+    <p>O HTML começa com a declaração <code>&lt;!DOCTYPE html&gt;</code>. Em seguida, temos as tags <strong>&lt;html&gt;</strong>, <i>&lt;head&gt;</i> e <u>&lt;body&gt;</u>. Cada uma tem sua função.</p>
+    <p>Veja este exemplo:</p>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Título&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Olá Mundo&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <p><a href="#topo"><small>Voltar ao índice</small></a></p>
 
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
+    <h2 id="listas">Diferença entre listas ordenadas e não ordenadas</h2>
+    <p>Listas <strong>ordenadas</strong> usam a tag <code>&lt;ol&gt;</code> e mostram os itens com números:</p>
+    <ol>
+        <li>Primeiro item</li>
+        <li>Segundo item</li>
+    </ol>
+    <p>Listas <strong>não ordenadas</strong> usam <code>&lt;ul&gt;</code> e mostram com marcadores:</p>
     <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
+        <li>Item A</li>
+        <li>Item B</li>
     </ul>
+    <p><a href="#topo"><small>Voltar ao índice</small></a></p>
+
+    <h2 id="referencias">Links de referências</h2>
+    <ul>
+        <li><a href="http://dio.me" target="_blank">DIO</a></li>
+        <li><a href="https://www.w3.org/" target="_blank">W3C</a></li>
+        <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank">MDN Web Docs</a></li>
+    </ul>
+
+    <hr>
+
+    <h3>Tags extras sugeridas</h3>
+    <p>Texto com <font color="red">fonte colorida</font>, <del>texto removido</del> e uso de subscrito e sobrescrito como em H<sub>2</sub>O e x<sup>2</sup>.</p>
+
+    <h4>Conclusão</h4>
+    <p>HTML é uma linguagem essencial para a criação de páginas web. Dominar suas <strong>tags</strong> básicas é o primeiro passo para se tornar um <i>desenvolvedor web</i>.</p>
 
 </body>
 </html>
