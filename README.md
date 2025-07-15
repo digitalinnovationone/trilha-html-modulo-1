@@ -1,16 +1,28 @@
 # Trilha HTML - Dio.me
 ## Módulo 01 - Primeiros passos com HTML
 
-A ideia deste desafio é elaborar um website, utilizando uma estrutura bem básica, utilizando tags aprendidas durante as aulas práticas até então. 
+## Descrição
+Este projeto é uma página web educativa desenvolvida para o treinamento semântico em HTML. Ele destaca o uso de ancoragem para navegação interna e aborda conceitos básicos de HTML e redes de computadores.
 
-Utilizar todas as tags explicadas nas aulas: `<h1>` até `<h6>`, `<p>`, `<mark>`, `<small>`, `<i>`, `<u>`, `<strong>`, `<ol>`, `<ul>`, `<li>`, `<a>`, `<hr>`, `<sub>`, `<sup>`, `<blockquote>`
+## Funcionalidades
+- **Estrutura Semântica**: Uso de tags semânticas como `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, e `<footer>`.
+- **Navegação por Âncoras**: Links que facilitam a navegação entre seções da página.
+- **Estilo Básico**: CSS simples para personalização de links e layout.
 
-Utilizar novas tags sugeridas: `<font>`, `<del>`, `<p>`, `<abbr>` (a ideia é buscar estas tags na internet, entender como ela funciona e utilizar no texto)
+## Conteúdos
+- História dos Computadores
+- O que são "Clients" e "Servers"
+- Estrutura Básica do HTML
+- Diferenças entre Listas Ordenadas e Não Ordenadas
+- Tags HTML de Texto
+- Links de Referências para aprofundamento
 
-Importante dizer que, estas tags te "seguirão" durante TODO O CURSO, por isso, é bom que esteja bem aprendidas para aproveitarem ao máximo as próximas aulas.
+## Tecnologias Utilizadas
+- **HTML5**: Para a estruturação do conteúdo.
+- **CSS**: Para estilização básica da página.
 
-Este desafio vai fazer com que tenha dúvidas, o que é ótimo! Aos poucos você vai evoluindo na sua jornada.
-
-Após concluído este desafio! Siga para o <strong>Módulo II - Conceitos Básicos.</strong>
-
-Nos vemos lá!
+## Referências
+1. [História e Evolução dos Computadores](https://www.todamateria.com.br/historia-e-evolucao-dos-computadores/)
+2. [Clients X Servers](https://www.controle.net/faq/cliente-servidor-uma-estrutura-para-a-computacao-centralizada)
+3. [Estrutura Básica HTML](https://tableless.github.io/iniciantes/manual/html/estruturabasica.html)
+4. [Listas Ordenadas X Listas não Ordenadas](http://www.nce.ufrj.br/ginape/cursohtml/conteudo/listas/ordenada.htm)
