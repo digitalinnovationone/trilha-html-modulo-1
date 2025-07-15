@@ -1,62 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Projeto de página web com ancoragem, parte do treinamento semântico em HTML.">
+    <meta name="keywords" content="HTML, ancoragem, projeto web, treinamento semântico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+    <title>Projeto de Página Web com Ancoragem - Treinamento Semântico em HTML</title>
+    <style>
+        a {
+            text-decoration: none;
+
+        }
+        a:visited {
+            color: rgb(18, 18, 235);
+        }
+    </style>
 </head>
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
-
-    <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
-    <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
-    </ul>
-
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
-    <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
-    </ul>
-
+    <header>
+        <h1 id="inicio">Módulo 1 - Primeiros Passos com HTML</h1>
+        <hr>
+        <h2>Índice</h2>
+        <nav>
+            <ul>
+                <li><a href="#historia-computadores">História dos computadores</a></li>
+                <li><a href="#clients">O que são <i>Clients</i>?</a></li>
+                <li><a href="#servers">O que são <i>Servers</i>?</a></li>
+                <li><a href="#estrutura-basica-html">Estrutura básica do HTML</a></li>
+                <li><a href="#listas">Listas Ordenadas X Listas Não Ordenadas</a></li>
+                <li><a href="#tags-texto">Tags HTML de Texto</a></li>
+                <li><a href="#links">Links de referências</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section id="historia-computadores">
+            <h2>História dos computadores</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <article>
+                <blockquote cite="https://www.todamateria.com.br/historia-e-evolucao-dos-computadores/"><q>A palavra “computador” vem do verbo “computar” que, por sua vez, significa “calcular”. Sendo assim, podemos pensar que a criação de computadores começa na idade antiga, já que a relação de contar já intrigava os homens.</q></blockquote>
+            </article>
+            <p>A história dos computadores é uma jornada fascinante que começa com dispositivos mecânicos simples, como o ábaco, e evolui para as máquinas eletrônicas avançadas que conhecemos hoje. </p>
+            <p>Nos anos 1940, os primeiros computadores digitais eletrônicos, como o <u>ENIAC</u>, foram desenvolvidos, revolucionando o processamento de dados.</p>
+            <p>Durante as décadas seguintes, a miniaturização dos componentes levou à criação dos computadores pessoais nos anos 1970 e 1980. Com o desenvolvimento da internet, os computadores se tornaram essenciais para a comunicação global e o compartilhamento de informações.</p>
+        </section>
+        <section id="clients">
+            <h2>O que são <i>Clients</i>?</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p>Em redes de computadores, um <strong>client (ou cliente</strong>) é um dispositivo ou programa que solicita serviços ou recursos de um servidor. Os clientes são típicos em modelos de computação baseados em rede, onde a interação do usuário ocorre. </p>
+            <p>Exemplos comuns de clientes incluem navegadores da web, que solicitam páginas de um servidor web, e aplicativos de e-mail que acessam servidores de correio. </p>
+            <p> Basicamente, os clientes facilitam o acesso a informações e serviços remotos, enquanto os servidores processam e provêm essa informação.</p>
+        </section>
+        <section id="servers">
+            <h2>O que são <i>Servers</i>?</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p><strong>Servers (ou servidores)</strong> são computadores poderosos ou programas que fornecem serviços, dados ou recursos para outros computadores, conhecidos como clientes. Eles desempenham funções essenciais em redes, hospedando sites, armazenando arquivos, gerenciando e-mails e mais.</p>
+            <p>Os servidores podem ser dedicados para executar tarefas específicas, como web servers, que entregam páginas web, ou file servers, que armazenam e gerenciam arquivos.</p>
+            <p>A robustez e a alta disponibilidade são características-chave dos servidores para garantir que recursos estejam sempre acessíveis.</p>
+        </section>
+        <section id="estrutura-basica-html">
+            <h2>Estrutura basica do HTML</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p>O <mark>HTML (HyperText Markup Language)</mark> é a espinha dorsal da web, definindo a estrutura e o layout das páginas.</p>
+            <p>A estrutura básica começa com <code>&lt;!DOCTYPE html&gt;</code> para declarar o uso do <mark>HTML5</mark>, seguido pelas tags <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, e <code>&lt;body&gt;</code>. O <code>&lt;head&gt;</code> contém metadados, links para CSS e scripts, enquanto o <code>&lt;body&gt;</code> abriga o conteúdo visível da página, organizado com tags de texto, imagens, links, e muito mais.</p>
+        </section>
+        <section id="listas">
+            <h2>Listas Ordenadas X Listas Não Ordenadas</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p>As listas são elementos fundamentais para organizar informações em HTML. Uma lista ordenada, criada com <code>&lt;ol&gt;</code>, automaticamente numera os itens dentro dela, ideal para instruções sequenciais ou classificações.</p>
+            <p>Cada item é representado por <code>&lt;li&gt;</code>. Em contraste, uma lista não ordenada usa <code>&lt;ul&gt;</code>, apresentando itens com marcadores, perfeita para listas sem prioridade ou ordem específica.</p>
+            <p>Ambas são úteis para estruturar dados de maneira clara e concisa.</p>
+        </section>
+        <section id="tags-texto">
+            <h2>Tags HTML de Texto</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p>Abaixo, segue uma lista de algumas tags usadas na formatação e formação de Textos em HTML:</p>
+            <nav>
+                <ul>
+                    <li><code><mark>&lt;h1&gt; a &lt;h6&gt;</mark></code>: Tags de cabeçalho, usadas para títulos e subtítulos, onde <code>&lt;h1&gt;</code> é o mais importante e <code>&lt;h6&gt;</code> o menos.</li>
+                    <li><code><mark>&lt;p&gt;</mark></code>: Denota um parágrafo de texto.</li>
+                    <li><code><mark>&lt;mark&gt;</mark></code>: Destaca o texto como se estivesse marcado com um marcador.</li>
+                    <li><code><mark>&lt;small&gt;</mark></code>: Reduz o tamanho do texto, indicativo de notas de rodapé ou detalhes menos importantes.</li>
+                    <li><code><mark>&lt;i&gt;</mark></code>: Aplica itálico ao texto, muitas vezes para ênfase.</li>
+                    <li><code><mark>&lt;u&gt;</mark></code>: Sublinhar o texto.</li>
+                    <li><code><mark>&lt;strong&gt;</mark></code>: Dá ênfase forte ao texto, geralmente exibido em negrito.</li>
+                    <li><code><mark>&lt;a&gt;</mark></code>: Cria um hiperlink, permitindo a navegação para outra <u>URL</u>.</li>
+                    <li><code><mark>&lt;hr&gt;</mark></code>: Insere uma linha horizontal, usado para separar conteúdo.</li>
+                    <li><code><mark>&lt;sub&gt;</mark></code>: Exibe texto como sobrescrito, usado para notações científicas.</li>
+                    <li><code><mark>&lt;sup&gt;</mark></code>: Exibe texto como sobrescrito, comum em expoentes.</li>
+                    <li><code><mark>&lt;blockquote&gt;</mark></code>: Denota uma citação em bloco, geralmente formatada com um recuo.</li>
+                    <li><code><mark>&lt;del&gt;</mark></code>exto que foi excluído ou removido de um documento, geralmente exibido com um risco (traço) no meio.</li>
+                    <li><code><mark>&lt;font&gt;</mark></code>: Antigamente usada para definir a cor, fonte e tamanho do texto. Está obsoleta no <abbr title="HyperText Markup Language 5">HTML5</abbr>; agora, recomenda-se usar CSS para estilização.</li>
+                </ul>
+            </nav>
+        </section>
+        <section id="links">
+            <h2>Links de Referências</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p>A seguir estão os links de sites utilizados como referência para este trabalho Eles fornecem informações valiosas e complementam o conteúdo apresentado.</p>
+            <nav>
+                <ol type="1">
+                    <li><i><a href="https://www.todamateria.com.br/historia-e-evolucao-dos-computadores/" target="_blank">História e Evolução dos Computadores</a></i></li>
+                    <li><i><a href="https://www.controle.net/faq/cliente-servidor-uma-estrutura-para-a-computacao-centralizada" target="_blank">Clients X Servers</a></i></li>
+                    <li><i><a href="https://tableless.github.io/iniciantes/manual/html/estruturabasica.html" target="_blank">Estrutura básica HTML</a></i></li>
+                    <li><i><a href="http://www.nce.ufrj.br/ginape/cursohtml/conteudo/listas/ordenada.htm" target="_blank">Listas Ordenadas X Listas não Ordenadas</a></i></li>
+                </ol>
+            </nav>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; <a href="#">2025 Meu Projeto Web </a></p>
+    </footer>
 </body>
 </html>
