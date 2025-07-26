@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade - HTML</title>
+    <meta name="description" content="Aprenda sobre Acessibilidade para HTML">
+    <link rel="shortcut icon" href="./assets/acessib-1-icon.png" type="image/png">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <style>
+        body{
+            font-family: monospace;
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+            color: black;
+            border: 2px solid;
+            border-radius: 4px;
+            padding: 10px 140px;
+        }
+        nav ul li a:hover{
+            background-color: lightskyblue;
+        }
+        .container-logo{
+            text-align: center;
+        }
+        .imagem-logo{
+            width: 200px;
+            text-align: center;
+        }
+        @media (max-width: 1130px){
+            nav ul{ 
+                display: flex;
+                flex-direction: column;   
+                align-items: center;
+            }
+            nav ul li {
+                display: flex;
+                margin: 10px;
+            }
+
+            nav ul li a{
+                border: none;
+            }
+
+        }
+        .section-home, .section-sobre{
+            text-align: center;
+        }
+        .section-home h1{
+            margin-top: 100px;
+        }
+        .ancora-retorno{
+            text-decoration: none;
+            color: black;
+        }
+        .section-sobre h1{
+            margin-top: 100px;
+        }
+        .titulo-section-sobre, .titulo-section-home, .titulo-formulario{
+            font-size: 30px;
+        }
+        .lista-ordenada{
+            text-align: center;
+            list-style-position: inside;
+        }
+        .item-lista{
+            padding: 10px;
+        }
+        .ancora-lista{
+            text-decoration: none;
+            font-size: 15px;
+            color: black;
+        }
+        .ancora-lista:hover{
+            text-decoration: underline;
+        }
+        .container-formulario{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .rotulo{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            padding: 5px;
+            margin: 5px;
+        }
+        .btn-limpar, .btn-enviar{
+            margin: 5px 30px;
+            padding: 10px;
+            font-family: monospace;
+        }
+        .btn-limpar, .btn-enviar:hover{
+            cursor: pointer;
+        }
+        .btn-limpar:hover{
+            background-color: skyblue;
+            border-radius: 4px;
+        }
+        .btn-enviar:hover{
+            background-color: skyblue;
+            border-radius: 4px;
+        }
+        .fieldset{
+            padding: 10px;
+            width: 600px;
+            height: 350px;
+        }
+        @media (max-width: 655px){
+            .fieldset{
+                width: auto;
+            }
+        }
+        @media(max-width: 590px){
+            .caixa-texto{
+                width: 200px;
+                height: 100px;
+            }
+        
+        }
+        .container-btn-inicio{
+            text-align: center;
+            padding: 10px;
+        }
+        .rodape-marca{
+            font-size: 24px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .rodape-complemento{
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <img class="imagem-logo" src="./assets/noun accessib - svg.svg" alt="Imagem do logo de acessibilidade">
+        </div>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section-home" alt="seção home">
+            <h1 alt="título de nível 1" class="titulo-section-home" id="home">Home</h1>
+            <h2 alt="título de nível 2">Acessibilidade em HTML</h2>
+            <p alt="parágrafo 1"><blockquote><i>Ter uma página web adaptável para pessoas com deficiência</i></blockquote></p>
+            <p alt="parágrafo 2">Uma das melhores formas de ajudar um leitor de tela a interpretar sua página é criar uma boa e consistente estrutura de títulos, parágrafos, listas, etc.</p>
+            <h2 alt="título de nível 2">WCAG</h2>
+            <p alt="parágrafo">Diretrizes de Acessibilidade para Conteúdo Web (<abbr>WCAG</abbr>), são um conjunto de recomendações técnicas para tornar o conteúdo da web acessível a pessoas com deficiência. 
+                Criadas pelo W3C, através da WAI (<abbr>Web Accessibility Initiative</abbr>), essas diretrizes visam garantir que pessoas com deficiência visual, auditiva, motora, cognitiva, entre outras, 
+                possam usar a web de forma eficaz. </p>
+            <h2 alt="título de nível 2">Árvore de Acessibilidade</h2>
+            <p alt="parágrafo">Navegadores convertem a marcação em uma representação interna chamada árvore do DOM. A árvore do DOM contém objetos representando todas as marcações de elementos, 
+                atributos e nós de texto. Os navegadores, então, criam uma árvore de acessibilidade baseada na árvore do DOM, a qual é usada por APIs específicas de plataforma para fornecer 
+                uma representação que possa ser entendida por tecnologias assistivas, como leitores de tela.</p>
+            <h2 alt="título de nível 2">Leitores de Tela</h2>
+            <p alt="parágrafo 1">Um aplicativo leitor de tela é um software que transforma o conteúdo exibido na tela de um dispositivo em fala, permitindo que pessoas com deficiência visual ou baixa visão possam interagir 
+                com a tecnologia. Existem diversas opções de aplicativos leitores de tela, tanto para computadores quanto para dispositivos móveis, cada um com suas características e funcionalidades.
+                Um leitor de tela pode ser usado para verificar a acessibilidade de um site, aplicativo ou documento. Ao usar um leitor de tela, você pode identificar problemas como 
+                falta de texto alternativo para imagens, links ilegíveis, falta de etiquetas em formulários e outras barreiras que  
+                podem impedir o acesso a informações importantes por pessoas com deficiência visual. </p>
+            <p alt="parágrafo 2"><strong><u>Certifique-se</u></strong> de acessar o manual do leitor de tela para ter um controle maior das ações possíveis em uma leitura, como pular um título ou parágrafo através de atalhos.</p>
+            <a alt="botão" class="ancora-retorno" href="#inicio"><small class="ancora-retorno-texto">Voltar ao Início</small></a>
+        </section>
+        <section class="section-sobre" alt="seção sobre">
+            <h1 class="titulo-section-sobre" id="sobre" role="título de nível 1">Sobre</h1>
+            <p alt="parágrafo 1">Esta página foi desenvolvida com o intuito de ajudar pessoas que estudam HTML a melhorar a estruturação de uma página web com conceitos de acessibilidade.</p>
+            <p alt="parágrafo 2">Através das Referências abaixo, é possível verificar com mais detalhes os assuntos abordados na seção Home.</p>
+            <ol class="lista-ordenada" alt="lista ordenada de referências">
+                <h1 class="titulo-lista" alt="título de nível 1 da lista ordenada">Referências:</h1>
+                <small>Clique nos itens  abaixo para acessar os links em outra aba</small>
+                <li class="item-lista" alt="item 1"><mark><a class="ancora-lista" target="_blank" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/">Diretrizes de Acessibilidade</a></mark></li>
+                <li class="item-lista" alt="item 2"><mark><a class="ancora-lista" target="_blank" href="https://blog.pope.tech/2023/11/27/how-to-use-chromes-accessibility-tree/">Acessibilidade no Chrome</a></mark></li>
+                <li class="item-lista" alt="item 3"><mark><a class="ancora-lista" target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Glossary/Accessibility_tree">Árvore de Acessibilidade</a></mark></li>
+                <li class="item-lista" alt="item 4"><mark><a class="ancora-lista" target="_blank" href="https://brasil.uxdesign.cc/acessibilidade-como-funcionam-os-leitores-de-tela-3d9b610216e1">Leitores de Tela</a></mark></li>
+            </ol>
+            <a alt="botão" class="ancora-retorno" href="#inicio"><small>Voltar ao Início</small></a>
+        </section>
+        <section class="section contato" alt="seção contato">
+            <div class="container-formulario">
+                <form id="contato" class="formulario-contato" onsubmit="" name="signup" method="post"  action="#"> 
+                    <h1 class="titulo-formulario">Contato</h1><br>
+                    <fieldset class="fieldset">
+                    <legend class="legenda">Informações de Contato</legend>
+                    <label class="rotulo" for="nome">Nome:</label><input type="text" name="nome" aria-required="true" aria-placeholder="Digite seu nome"> <br>
+                    <label class="rotulo" for="email">E-mail:</label><input type="text" name="email" aria-required="true" aria-placeholder="Digite seu email"><br>
+                    <label class="rotulo" for="mensagem">Mensagem:</label>       
+                    <textarea class="caixa-texto" rows="10" cols="70" aria-required="true" name="mensagem" placeholder="Digite sua mensagem"></textarea><br>
+                    <button class="btn-limpar" type="reset">Limpar</button> <button class="btn-enviar" type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="container-btn-inicio">
+                <a alt="botão" class="ancora-retorno" href="#inicio"><small>Voltar ao Início</small></a>
+            </div>
+        </section>
+    </main>
+    <footer role="rodapé">
+        <h1 role="título de nível 1" class="rodape-marca">AcessibilidadeHTML<sup>&#174</sup></h1>
+        <br>
+        <p class="rodape-complemento">Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
