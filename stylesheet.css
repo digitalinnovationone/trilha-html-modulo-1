@@ -1,0 +1,39 @@
+.body{
+    background-color:black;
+    color: #fff;
+    
+}
+
+.HTML_logotype{
+    width: 120px;   
+    display: block;
+}
+
+.conteudo_principal{
+    color: #fff;
+}
+
+.texto_funcionalidade{
+    color:#fff;
+}
+
+.element_list{
+    color: #fff;
+}
+
+.lista_indice{
+    list-style: square;
+}
+
+.lista_indice :hover{
+    background-color: white;
+ }
+ 
+.links_lista{
+    text-decoration: none;
+    color: darkorange;  
+}
+
+ 
+
+
