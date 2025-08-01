@@ -1,62 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+    <title>Oque é HTML?</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
-
-    <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
-    <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
+<body class="body">
+    <img class="HTML_logotype" width="5%" src="https://th.bing.com/th/id/R.cae1b4f6b223fe5a7bb712b680cffa67?rik=DpBcDgsVsaTpvQ&riu=http%3a%2f%2fassets.stickpng.com%2fthumbs%2f5847f5bdcef1014c0b5e489c.png&ehk=ce9Og%2fYuXZic%2fTWR15NzqGIfTXj2rnuAd3m00U%2fIAWU%3d&risl=&pid=ImgRaw&r=0" alt="Logo do HTML5">     
+<hr>
+    <h2> índice </h2>
+    <ul class="lista_indice">
+        <li > <a class="links_lista" href="#base"> A Base da Internet </a> </li>
+        <li> <a class="links_lista" href="#funciona"> Como o HTML Funciona? </a> </li>
+        <li> <a class="links_lista" href="#elementos"> Elementos Comuns do HTML </a> </li>
+        <li> <a class="links_lista" href="#evolucoes"> Evoluções e Versões </a> </li>
+        <li> <a class="links_lista" href="#importancia">  Importância de Aprender HTML </a> </li>
+        <li> <a class="links_lista" href="#conclusao"> Conclusão </a> </li>
     </ul>
+        
+    <h2 id="base"> HTML - A Base da Internet </h2>
+    <p class="texto_apresentacao"> HTML, sigla para <i> <u> HyperText Markup Language </u> </i> (Linguagem de Marcação de Hipertexto), é a linguagem mais fundamental da web. Toda página da internet, por trás das aparências modernas e interativas, começa com HTML. Ele é responsável por estruturar o conteúdo que será exibido no navegador, como textos, imagens, links, tabelas, vídeos e formulários.
+Criado no início da década de 1990 por Tim Berners-Lee, o HTML surgiu com o objetivo de conectar e apresentar informações em formato digital, utilizando hiperlinks para navegar de um conteúdo para outro. Isso revolucionou o modo como as pessoas acessam e compartilham conhecimento.</p>
+<hr>
+    <h2 id="funciona">Como o HTML Funciona?</h2> 
+    <p class="texto_resposta">HTML não é uma linguagem de programação. É uma linguagem de marcação. Isso significa que seu papel não é executar comandos, mas sim marcar e organizar os elementos do conteúdo. Cada parte do texto é envolvida por marcas chamadas tags, que indicam o papel daquele trecho na estrutura da página.
+Por exemplo, há tags específicas para títulos, parágrafos, listas, links e imagens. Com isso, o navegador entende como deve exibir cada item. O HTML por si só não estiliza nada — ele só estrutura. Para aparência, entra o CSS (Cascading Style Sheets). Para interatividade, entra o JavaScript.</p>
+    <p>A seguir, um vídeo explicativo para reforçar esses conceitos básicos:</p>
+    <iframe class="video_HTML "width="560" height="315" src="https://www.youtube.com/embed/qz0aGYrrlhU?si=SPxSLh9fozuGHJRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<hr>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
-
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
-    <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
+    <h2 id="elementos">Elementos Comuns do HTML</h2> 
+    <p class="texto_resposta">O HTML é composto por dezenas de elementos, mas alguns são mais usados e essenciais no dia a dia:</p> 
+    <ul class="lista_elementos">
+        <li> <b> Títulos </b> (de &lt;h1&gt; até &lt;h6&gt; ): organizam o conteúdo por níveis de importância. </li>
+        <li> <b>Parágrafos</b> (&lt;p&gt;): formam os blocos de texto. </li>
+        <li> <b>Imagens</b> (&lt;img&gt;): exibem arquivos visuais dentro da página. </li>
+        <li> <b>Links</b> (&lt;a&gt;): permitem navegar entre páginas ou sites. </li>
+        <li> <b>Listas</b> (&lt;ul&gt; e &lt;ol&gt;): organizam itens de forma ordenada ou não ordenada. </li>
+        <li> <b>Tabelas</b> ( &lt;table&gt;): apresentam dados de forma estruturada. </li>
+        <li> <b>Formulários</b> (&lt;form&gt;): coletam dados do usuário (nome, e-mail, mensagem etc.). </li>
     </ul>
+<hr>
 
+    <h2 id="evolucoes">Evolução e Versões</h2>
+    <p class="texto_resposta">Desde sua criação, o HTML passou por várias versões. A mais atual é o HTML5, que trouxe melhorias significativas, como:</p>
+    <ul class="lista_evo">
+        <li>Suporte a vídeo e áudio sem precisar de plugins; </li>
+        <li>Novas tags semânticas, como < header >, < footer >, < article >, < section >;
+        <li>Melhor desempenho com JavaScript; </li>
+    </ul>
+<hr>
+
+    <h2 id="importancia">Importância de Aprender HTML</h2>
+    <p class="texto_resposta"> Mesmo com o avanço das tecnologias e ferramentas automáticas, entender HTML continua sendo essencial para qualquer pessoa que deseja criar sites ou trabalhar com desenvolvimento web. Com ele, você tem controle direto sobre a estrutura do seu conteúdo, pode resolver problemas com mais facilidade e entende como a web realmente funciona.</p>
+    <p>Saber HTML é o primeiro degrau para quem quer se tornar desenvolvedor, web designer, analista de sistemas ou mesmo criar um projeto pessoal com qualidade. </p>
+<hr>
+    <h2 id="conclusao">Conclusão</h2>
+    <p>HTML é simples, direto e poderoso. Ele continua sendo a espinha dorsal da internet, mesmo após mais de 30 anos desde sua criação. Quem domina HTML domina a base da web. É como aprender a construir uma casa do zero: sem ele, tudo o que vem depois desmorona.</p>
+<hr>
+    
 </body>
 </html>
