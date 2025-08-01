@@ -1,16 +1,37 @@
-# Trilha HTML - Dio.me
-## Módulo 01 - Primeiros passos com HTML
+# Desafio do Módulo 01 - Primeiros Passos com HTML
 
-A ideia deste desafio é elaborar um website, utilizando uma estrutura bem básica, utilizando tags aprendidas durante as aulas práticas até então. 
+Este projeto foi feito como parte da atividade prática do primeiro módulo do curso, com o objetivo de aplicar na prática as principais tags HTML aprendidas até aqui.
 
-Utilizar todas as tags explicadas nas aulas: `<h1>` até `<h6>`, `<p>`, `<mark>`, `<small>`, `<i>`, `<u>`, `<strong>`, `<ol>`, `<ul>`, `<li>`, `<a>`, `<hr>`, `<sub>`, `<sup>`, `<blockquote>`
+## ✅ Objetivo
 
-Utilizar novas tags sugeridas: `<font>`, `<del>`, `<p>`, `<abbr>` (a ideia é buscar estas tags na internet, entender como ela funciona e utilizar no texto)
+Construir uma página HTML simples, com conteúdo bem estruturado, usando títulos, parágrafos, listas, imagens, links e outros elementos básicos da linguagem.
 
-Importante dizer que, estas tags te "seguirão" durante TODO O CURSO, por isso, é bom que esteja bem aprendidas para aproveitarem ao máximo as próximas aulas.
+## 🧱 Tags aplicadas no projeto
 
-Este desafio vai fazer com que tenha dúvidas, o que é ótimo! Aos poucos você vai evoluindo na sua jornada.
+- Títulos: `<h1>` até `<h6>`
+- Parágrafos: `<p>`
+- Destaques: `<strong>`, `<i>`, `<u>`, `<mark>`, `<small>`
+- Listas ordenadas e não ordenadas: `<ol>`, `<ul>`, `<li>`
+- Links: `<a>`
+- Linha horizontal para separação de conteúdo: `<hr>`
+- Imagem: `<img>`
+- Incorporação de vídeo: `<iframe>`
 
-Após concluído este desafio! Siga para o <strong>Módulo II - Conceitos Básicos.</strong>
+## 📋 Conteúdo da página
 
-Nos vemos lá!
+A página criada aborda o tema **"O que é HTML?"**, com seções organizadas por âncoras:
+
+- Introdução ao HTML e sua importância
+- Explicação sobre o funcionamento da linguagem
+- Elementos comuns do HTML
+- Evolução das versões
+- Importância de aprender HTML
+- Conclusão sobre a relevância do conteúdo
+
+## 💡 Aprendizado
+
+Esse desafio reforçou a estrutura do HTML e a função de cada tag na organização do conteúdo. Também foi importante para exercitar a separação entre estrutura e estilo, além de praticar a hierarquia dos títulos e o uso de listas e links internos.
+
+---
+
+Projeto concluído com sucesso.
