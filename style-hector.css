@@ -3,7 +3,7 @@ body {
     background-color: #a59f9f;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 0 0 15px 0;
 }
 
 header {
@@ -67,7 +67,7 @@ main a {
     color: #307b9e;
     font-size: small;
     text-decoration: none;
-    padding: 5px;
+    padding: 7px;
 }
 
 main a:hover {
@@ -81,4 +81,9 @@ main a:hover {
 h2 {
     display: inline;
     margin-right: 20px;
+}
+
+footer {
+    font-size: small;
+    text-align: center;
 }
