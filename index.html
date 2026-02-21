@@ -1,62 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+    <title>Módulo I - Primeiros Passos com HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: rgb(24, 24, 24);
+            color: white;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        h2, h3, h4, h5, h6 {
+            margin: 15px 0 10px 0;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        a {
+            color: #4db8ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        mark {
+            background-color: rgba(255, 255, 0, 0.3);
+            padding: 2px 6px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #4db8ff;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
+    <header>
+        <h1 id="modulo">Módulo 1 - Primeiros Passos com HTML</h1>
+        <hr />
+    </header>
 
-    <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
-    <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
-    </ul>
+    <nav>
+        <h2><mark>Índice</mark></h2>
+        <ol>
+            <li><a href="#img">O que são as tags <i>&lt;img&gt;</i>?</a></li>
+            <li><a href="#video">O que são as tags <i>&lt;video&gt;</i>?</a></li>
+            <li><a href="#web-scraping">O que é <i>Web Scraping</i>?</a></li>
+            <li><a href="#ul-ol">O que são listas ordenadas e não ordenadas?</a></li>
+            <li><a href="#links">Links de referências</a></li>
+        </ol>
+    </nav>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <main>
+        <section id="img">
+            <h3>O que são as tags <i>&lt;img&gt;</i>?</h3>
+            <a href="#modulo"><small>↑ Voltar ao topo</small></a>
+            <p>A tag &lt;img&gt; é usada para adicionar uma imagem em uma página HTML.</p>
+            <p>As imagens podem ter origem através de outras páginas web ou de forma local.</p>
+            <p>A tag &lt;img&gt; tem dois atributos obrigatórios:</p>
+            <ul>
+                <li><strong>src</strong> - Especifica o caminho para a imagem "link" ou o caminho local</li>
+                <li><strong>alt</strong> - Especifica um texto alternativo para a imagem, se por algum motivo a imagem não puder ser exibida</li>
+            </ul>
+            <hr />
+        </section>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+        <section id="video">
+            <h3>O que são as tags <i>&lt;video&gt;</i>?</h3>
+            <a href="#modulo"><small>↑ Voltar ao topo</small></a>
+            <p>A tag &lt;video&gt; é usada para incluir um vídeo em uma página HTML.</p>
+            <p>A tag &lt;video&gt; contém o atributo src que especifica o caminho para o vídeo através do "link" ou o caminho local.</p>
+            <hr />
+        </section>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+        <section id="web-scraping">
+            <h3>O que é <i>Web Scraping</i>?</h3>
+            <a href="#modulo"><small>↑ Voltar ao topo</small></a>
+            <p>É a extração de dados de websites de maneira automatizada via robôs ou bots, convertendo esses dados de uma maneira estruturada e útil para análise, sendo utilizada de diversas formas.</p>
+            <hr />
+        </section>
 
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+        <section id="ul-ol">
+            <h3>O que são listas ordenadas e não ordenadas?</h3>
+            <a href="#modulo"><small>↑ Voltar ao topo</small></a>
+            <p>A principal diferença entre a lista ordenada e a lista não-ordenada está na maneira com que os itens de cada lista são apresentados - a lista ordenada enumera os elementos; a lista não-ordenada coloca marcadores antes de cada elemento.</p>
+            <p>Uma lista ordenada é delimitada pelas etiquetas &lt;ol&gt; e &lt;/ol&gt; (Ordered List). Cada item da lista é delimitado pelas etiquetas &lt;li&gt; e &lt;/li&gt; (List Item).</p>
+            <p>A estrutura da lista não-ordenada é semelhante à da lista ordenada - porém, ao invés de ser construída com o elemento ol, é construída com o elemento ul (Unordered List).</p>
+            <hr />
+        </section>
 
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+        <section id="links">
+            <h3>Links de referências</h3>
+            <a href="#modulo"><small>↑ Voltar ao topo</small></a>
+            <blockquote>
+                <ul>
+                    <li><a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">TAG HTML &lt;img&gt;</a></li>
+                    <li><a href="https://www.w3schools.com/tags/tag_video.asp" target="_blank">TAG HTML &lt;video&gt;</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/Web_scraping" target="_blank">WEB SCRAPING</a></li>
+                    <li><a href="http://www.nce.ufrj.br/ginape/cursohtml/conteudo/listas/ordenada.htm" target="_blank">LISTAS ORDENADAS E NÃO ORDENADAS</a></li>
+                </ul>
+            </blockquote>
+        </section>
+    </main>
 
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
-    <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
-    </ul>
-
+    <footer>
+        <hr />
+        <p><small>&copy; 2026 Módulo HTML - DIOME</small></p>
+    </footer>
 </body>
 </html>
